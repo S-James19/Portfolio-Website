@@ -3,3 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.navbar {
+    height: 100px;
+    width: auto;
+    background-color: black;
+    line-height: 50px;
+}
+
+.navbar * {
+    color: white;
+}
+
+.navbar-options, .navbar-options a, .navbar-options li{
+    display: inline-block;
+    list-style: none;
+    text-decoration: none;
+}
+
+
