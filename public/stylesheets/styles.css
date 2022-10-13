@@ -5,11 +5,9 @@
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
+    height: 90px;
     background-color: black;
-    padding: 30px;
-    align-items: center;
+    width: 100%;
 }
 
 header * {
@@ -19,6 +17,14 @@ header * {
     text-align: center;
 }
 
-.navbar li {
-    display: inline-block;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
 }
+
+.navbar-options li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
