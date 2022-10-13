@@ -8,17 +8,36 @@
     height: 100px;
     width: auto;
     background-color: black;
-    line-height: 50px;
+    line-height: 100px;
 }
 
 .navbar * {
     color: white;
+    font-weight: bold;
 }
 
-.navbar-options, .navbar-options a, .navbar-options li{
+.logo {
+    margin-left: 30px;
+    font-size: 40px;
+}
+
+.navbar-options {
+    float: right;
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+.navbar-options li {
     display: inline-block;
-    list-style: none;
+    text-align: center;
+}
+
+.navbar-options a {
     text-decoration: none;
+}
+
+.navbar-options a:hover {
+    color: red;
 }
 
 
