@@ -56,14 +56,15 @@ h1, h2 {
     left: 50%;
     bottom: 50%;
     transform: translate(-50%,50%);
+    font-size: 1rem;
 }
 
 .introduction h1 {
-    font-size: 4rem;
+    font-size: 4em;
 }
 
 .introduction h2 {
-    font-size: 1.75rem;
+    font-size: 1.75em;
 }
 
 .introduction-content {
@@ -99,6 +100,7 @@ h1, h2 {
     font-size: 25px;
     padding: 1.5% 4%;
     background-color: rgba(30, 30, 30, 0.7);
+    margin-bottom: 300px;
 
 }
 
@@ -143,4 +145,59 @@ h1, h2 {
 .navbar-options li {
     display: inline-block;
     padding: 0px 15px;
+}
+
+/* Responsive */
+
+@media(max-width: 900px) {
+    .introduction {
+        font-size: 0.9rem;
+    }
+
+    .portrait {
+        width: 350px;
+    }
+}
+
+@media(max-width: 768px) {
+    .introduction {
+        font-size: 0.75rem;
+    }
+
+    .portrait {
+        width: 300px;
+    }
+}
+
+@media(max-width: 600px) {
+    .introduction {
+        font-size: 0.6rem;
+        flex-direction: column-reverse;
+    }
+
+    .portrait {
+        width: 250px;
+    }
+}
+
+@media(max-width: 480px) {
+    .introduction {
+        font-size: 0.5rem;
+        flex-direction: column-reverse;
+    }
+
+    .portrait {
+        width: 200px;
+    }
+}
+
+@media(max-width: 320px) {
+    .introduction {
+        font-size: 0.35rem;
+        flex-direction: column-reverse;
+    }
+
+    .portrait {
+        width: 150px;
+    }
 }
