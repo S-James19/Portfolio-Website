@@ -42,6 +42,7 @@ h1, h2 {
     background-position: center;
     background-size: contain;
     position: relative;
+    font-size: 15px;
 }
 
 /* Introduction */
@@ -97,7 +98,6 @@ h1, h2 {
 
 .navbar {
     display: flex;
-    font-size: 25px;
     padding: 1.5% 4%;
     background-color: rgba(30, 30, 30, 0.7);
     margin-bottom: 300px;
@@ -150,6 +150,10 @@ h1, h2 {
 /* Responsive */
 
 @media(max-width: 900px) {
+    html {
+        font-size: 10px;
+    }
+    
     .introduction {
         font-size: 0.9rem;
     }
@@ -157,11 +161,48 @@ h1, h2 {
     .portrait {
         width: 350px;
     }
+
+    .navbar {
+        flex-direction: column;
+        width: 40vw;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5em;
+    }
+
+    .navbar-options {
+        text-align: center;
+        padding: 5% 0px;
+        flex: 0;
+    }
+
+    .navbar-options li {
+        display: block;
+        padding: 15% 0px;
+    }
+
+    .logo {
+        padding: 10px 0px;
+        flex: 0;
+    }
+
+    .socials {
+        order: 1;
+    }
+
+    .socials a {
+        display: block;
+        padding: 20% 0px;
+    }
 }
 
 @media(max-width: 768px) {
-    .introduction {
-        font-size: 0.75rem;
+    html {
+        font-size: 8px;
     }
 
     .portrait {
@@ -170,8 +211,10 @@ h1, h2 {
 }
 
 @media(max-width: 600px) {
+    html {
+        font-size: 6px;
+    }
     .introduction {
-        font-size: 0.6rem;
         flex-direction: column-reverse;
     }
 
@@ -181,23 +224,29 @@ h1, h2 {
 }
 
 @media(max-width: 480px) {
-    .introduction {
-        font-size: 0.5rem;
-        flex-direction: column-reverse;
+    html {
+        font-size: 4px;
     }
 
     .portrait {
         width: 200px;
     }
+
+    .navbar {
+        font-size: 1em;
+    }
 }
 
 @media(max-width: 320px) {
-    .introduction {
-        font-size: 0.35rem;
-        flex-direction: column-reverse;
+    html {
+        font-size: 3px;
     }
 
     .portrait {
         width: 150px;
+    }
+
+    .navbar {
+        font-size: 0.5em;
     }
 }
