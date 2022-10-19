@@ -22,6 +22,11 @@ body * {
     box-sizing: border-box;
 }
 
+h1, h2 {
+    padding: 5px 0px;
+}
+
+
 /* Header */
 
 .index {
@@ -42,6 +47,44 @@ body * {
     left: 0;
     right: 0;
     opacity: 0.05;
+}
+
+.introduction {
+    width: 90%;
+    margin: 10% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.introduction h1 {
+    font-size: 70px;
+}
+
+.introduction h2 {
+    font-size: 35px;
+}
+
+.introduction-content {
+    text-align: right;
+    padding: 0px 5%;
+}
+
+.portrait {
+    width: 400px;
+}
+
+.contactbtn {
+    background-color: transparent;
+    border: 2px solid white;
+    display: block;
+    float: right;
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.contactbtn:hover {
+    background-color: blue;
 }
 
 /* Navbar */

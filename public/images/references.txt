@@ -1,1 +1,2 @@
 header background: https://unsplash.com/photos/gcgves5H_Ac
+placeholder photo of me: https://unsplash.com/photos/5NqOEeBBbws
