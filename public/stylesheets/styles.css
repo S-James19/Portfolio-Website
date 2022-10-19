@@ -12,7 +12,7 @@
     src: url('../fonts/Source_Code_Pro/SourceCodePro-VariableFont_wght.ttf');
 }
 
-/* General */
+/*--------------- General ----------------*/
 
 body * {
     font-family: 'DefaultFont', Fallback, sans-serif;
@@ -31,8 +31,16 @@ h1, h2 {
     padding: 5px 0px;
 }
 
+h1 {
+    font-size: 64px;
+}
 
-/* Header */
+h2 {
+    font-size: 30px;
+}
+
+
+/*--------------- Header ----------------*/
 
 .index {
     width: 100%;
@@ -45,7 +53,7 @@ h1, h2 {
     font-size: 15px;
 }
 
-/* Introduction */
+/*--------------- Introduction ----------------*/
 
 .introduction {
     margin: auto;
@@ -94,7 +102,7 @@ h1, h2 {
     font-family: 'CodeFont';
 }
 
-/* Navbar */
+/*--------------- Navbar ----------------*/
 
 .navbar {
     display: flex;
@@ -147,7 +155,12 @@ h1, h2 {
     padding: 0px 15px;
 }
 
-/* Responsive */
+.fa-bars, .fa-xmark {
+    display: none !important; 
+}
+
+
+/*--------------- Responsive ----------------*/
 
 @media(max-width: 900px) {
     html {
@@ -167,11 +180,24 @@ h1, h2 {
         width: 40vw;
         height: 100%;
         position: absolute;
-        right: 0;
+        right: -400px;
         z-index: 1;
         align-items: center;
         justify-content: center;
         font-size: 1.5em;
+        display: none;
+    }
+
+    .fa-xmark {
+        display: block !important;
+        order: -1;
+        padding: 10%;
+    }
+
+    .fa-bars {
+        display: block !important;
+        float: right;
+        padding: 10px;
     }
 
     .navbar-options {

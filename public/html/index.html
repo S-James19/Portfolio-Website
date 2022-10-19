@@ -15,22 +15,28 @@
 
 <body>
     <header class="index"> <!-- header -->
-        <nav class = "navbar"> <!-- navbar -->
-            <a class="logo" href="#">SAM JAMES</a> <!-- logo -->
-            <div class="socials"> <!-- social logos-->
-                <a href="#"><i class="fa fa-github" name="github"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-discord"></i></a>
-            </div>
-            <div class="navbar-options"> <!-- selection navbar-->
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">PROJECTS</a></li>
-                    <li><a href="#">CONTACT</a></li>
-               </ul>
-            </div>
-        </nav>
+        <div class="navigation">
+            <nav class = "navbar" id="navbar"> <!-- navbar -->
+                <a class="logo" href="#">SAM JAMES</a> <!-- logo -->
+                <div class="socials"> <!-- social logos-->
+                    <a href="#"><i class="fa fa-github" name="github"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-discord"></i></a>
+                </div>
+                <div class="navbar-options"> <!-- selection navbar-->
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">PROJECTS</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                   </ul>
+                </div>
+                <!-- https://fontawesome.com/icons/xmark?s=solid&f=sharp-->
+                <i class="fa-sharp fa-solid fa-xmark" onclick="hideMenu()"></i>
+            </nav>
+            <!-- https://fontawesome.com/icons/bars?s=solid&f=classic-->
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </div>
 
         <div class="introduction">
             <div class="introduction-content">
@@ -43,6 +49,26 @@
             <img class="portrait" src="../images/placeholder.jpg" alt="placeholder">
         </div>
     </header>
+
+    <script>
+        var navigation = document.getElementById('navbar');
+
+        function showMenu() {
+            if(navigation.style.display === "")
+            {
+                navigation.style.display = "flex";
+            }  
+            navigation.style.right = "0";
+        }
+
+        function hideMenu() {
+            if (navigation.style.display === "flex") 
+            {
+                navigation.style.display = "";
+            }
+            navigation.style.right = "-400px";
+        }
+    </script>
 
 </body>
 
