@@ -39,6 +39,8 @@ h2 {
     font-size: 30px;
 }
 
+/*--------------- ID Classes ----------------*/
+
 
 /*--------------- Header ----------------*/
 
@@ -56,13 +58,32 @@ h2 {
 
 /*--------------- Navbar ----------------*/
 
-.navbar {
+#navbar {
     display: flex;
     padding: 1.5% 4%;
     background-color: rgba(30, 30, 30, 0.7);
     margin-bottom: 300px;
     font-size: 1.5rem;
-    
+}
+
+
+#navbar a:before {
+    content: "";
+    height: 1px;
+    width: 0%;
+    background-color: #008001;
+    display: block;
+    margin: auto;
+}
+
+#navbar a:hover:before {
+    width: 100%;
+    transition: 0.15s ease-in;
+}
+
+#navbar a {
+    position: relative;
+    display: inline-block;
 }
 
 .navbar-options {
@@ -70,6 +91,11 @@ h2 {
     text-align: right;
     display: flex;
     justify-content: right;
+}
+
+.navbar-options li {
+    display: inline-block;
+    padding: 0px 15px;
 }
 
 .logo {
@@ -86,32 +112,21 @@ h2 {
     padding: 0 5px;
 }
 
-.navbar a {
-    position: relative;
-    display: inline-block;
-}
-
-.navbar a:before {
-    content: "";
-    height: 1px;
-    width: 0%;
-    background-color: #008001;
-    display: block;
-    margin: auto;
-}
-
-.navbar a:hover:before {
+.menu-bars {
     width: 100%;
-    transition: 0.15s ease-in;
+    max-width: 30px;
+    position: absolute;
+    right: 3.5%;
+    top: 3.5%;
+    display: none;
 }
 
-.navbar-options li {
-    display: inline-block;
-    padding: 0px 15px;
-}
-
-.fa-bars, .fa-xmark {
-    display: none !important; 
+.menu-crossx {
+    width: 100%;
+    max-width: 30px;
+    color: white;
+    padding: 15% 0;
+    display: none;
 }
 
 /*--------------- Introduction ----------------*/
@@ -164,8 +179,14 @@ h2 {
 
 /*--------------- Responsive ----------------*/
 
+@media(min-width: 881px) {
+    #navbar {
+        display: flex;
+    }
+}
+
 @media(max-width: 880px) {
-    .navbar {
+    #navbar {
         flex-direction: column;
         align-items: center;
         width: 40%;
@@ -173,7 +194,12 @@ h2 {
         position: absolute;
         right: 0;
         z-index: 1;
-        margin-top: 5%;
+        padding-top: 5%;
+        display: none;
+    }
+
+    .menu-bars, .menu-crossx {
+        display: block;
     }
 
     .navbar-options li {
@@ -188,7 +214,8 @@ h2 {
     }
 
     .logo {
-        flex: 0
+        flex: 0;
+        padding: 10% 0;
     }
 
     .socials {
@@ -212,8 +239,6 @@ h2 {
     .introduction-content {
         padding: 0 5%;
     }
-
-    
 }
 
 @media(max-width: 740px) {
@@ -227,8 +252,12 @@ h2 {
         font-size: 0.4rem;
     }
 
-    .navbar {
+    #navbar {
         font-size: 1.2rem;
+    }
+
+    .menu-crossx {
+        width: 20px;
     }
 }
 
@@ -253,7 +282,7 @@ h2 {
 }
 
 @media(max-width: 380px) {
-    .navbar {
+    #navbar {
         font-size: 0.8rem;
     }
 

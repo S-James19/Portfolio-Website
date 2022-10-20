@@ -1,0 +1,9 @@
+--- IMAGES --- 
+
+header background: https://unsplash.com/photos/gcgves5H_Ac
+placeholder photo of me: https://unsplash.com/photos/5NqOEeBBbws
+
+--- UI ---
+
+bars icon: https://uxwing.com/hamburger-menu-icon/
+cross x: https://uxwing.com/remove-cross-icon/

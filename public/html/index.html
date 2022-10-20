@@ -16,7 +16,8 @@
 <body>
     <header class="index"> <!-- header -->
         <div class="navigation">
-            <nav class = "navbar" id="navbar"> <!-- navbar -->
+            <nav id="navbar"> <!-- navbar -->
+                <img class="menu-crossx" src="../assets/ui/cross.png" alt="close menu" onclick="hideMenu()">
                 <a class="logo" href="#">SAM JAMES</a> <!-- logo -->
                 <div class="socials"> <!-- social logos-->
                     <a href="#"><i class="fa fa-github" name="github"></i></a>
@@ -31,11 +32,8 @@
                         <li><a href="#">CONTACT</a></li>
                    </ul>
                 </div>
-                <!-- https://fontawesome.com/icons/xmark?s=solid&f=sharp-->
-                <i class="fa-sharp fa-solid fa-xmark" onclick="hideMenu()"></i>
             </nav>
-            <!-- https://fontawesome.com/icons/bars?s=solid&f=classic-->
-            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+            <img class="menu-bars" src="../assets/ui/bars.png" alt="menu bars" onclick="showMenu()">
         </div>
 
         <div class="introduction">
@@ -55,22 +53,15 @@
 
     <!-- Script to hide and unhide navbar-->
     <script>
-        var navigation = document.getElementById('navbar');
+
+        var sidenav = document.getElementById('navbar');
 
         function showMenu() {
-            if(navigation.style.display === "")
-            {
-                navigation.style.display = "flex";
-            }  
-            navigation.style.right = "0";
+            sidenav.style.display = "flex";
         }
 
         function hideMenu() {
-            if (navigation.style.display === "flex") 
-            {
-                navigation.style.display = "";
-            }
-            navigation.style.right = "-400px";
+            sidenav.style.display = "none";
         }
     </script>
 
