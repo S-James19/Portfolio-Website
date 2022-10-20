@@ -56,16 +56,17 @@ h2 {
 /*--------------- Introduction ----------------*/
 
 .introduction {
-    margin: auto;
-    width: 80%;
     display: flex;
     justify-content: center;
-    align-items: center;
     position: absolute;
+    transform: translate(-50%, 50%);
     left: 50%;
     bottom: 50%;
-    transform: translate(-50%,50%);
-    font-size: 1rem;
+}
+
+.portrait {
+    width: 400px;
+    height: auto;
 }
 
 .introduction h1 {
@@ -79,10 +80,6 @@ h2 {
 .introduction-content {
     text-align: left;
     padding: 0px 50px;
-}
-
-.portrait {
-    width: 400px;
 }
 
 .contactbtn {
@@ -108,7 +105,6 @@ h2 {
     display: flex;
     padding: 1.5% 4%;
     background-color: rgba(30, 30, 30, 0.7);
-    margin-bottom: 300px;
 
 }
 
@@ -161,118 +157,3 @@ h2 {
 
 
 /*--------------- Responsive ----------------*/
-
-@media(max-width: 900px) {
-    html {
-        font-size: 10px;
-    }
-    
-    .introduction {
-        font-size: 0.9rem;
-    }
-
-    .portrait {
-        width: 350px;
-    }
-
-    .navbar {
-        flex-direction: column;
-        width: 40vw;
-        height: 100%;
-        position: absolute;
-        right: -400px;
-        z-index: 1;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5em;
-        display: none;
-    }
-
-    .fa-xmark {
-        display: block !important;
-        order: -1;
-        padding: 10%;
-    }
-
-    .fa-bars {
-        display: block !important;
-        float: right;
-        padding: 10px;
-    }
-
-    .navbar-options {
-        text-align: center;
-        padding: 5% 0px;
-        flex: 0;
-    }
-
-    .navbar-options li {
-        display: block;
-        padding: 15% 0px;
-    }
-
-    .logo {
-        padding: 10px 0px;
-        flex: 0;
-    }
-
-    .socials {
-        order: 1;
-    }
-
-    .socials a {
-        display: block;
-        padding: 20% 0px;
-    }
-}
-
-@media(max-width: 768px) {
-    html {
-        font-size: 8px;
-    }
-
-    .portrait {
-        width: 300px;
-    }
-}
-
-@media(max-width: 600px) {
-    html {
-        font-size: 6px;
-    }
-    .introduction {
-        flex-direction: column-reverse;
-    }
-
-    .portrait {
-        width: 250px;
-    }
-}
-
-@media(max-width: 480px) {
-    html {
-        font-size: 4px;
-    }
-
-    .portrait {
-        width: 200px;
-    }
-
-    .navbar {
-        font-size: 1em;
-    }
-}
-
-@media(max-width: 320px) {
-    html {
-        font-size: 3px;
-    }
-
-    .portrait {
-        width: 150px;
-    }
-
-    .navbar {
-        font-size: 0.5em;
-    }
-}
