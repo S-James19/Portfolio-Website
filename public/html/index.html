@@ -7,10 +7,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../stylesheets/styles.css">
-
     <!-- Fontawesome logos: https://fontawesome.com/-->
     <script src="https://kit.fontawesome.com/72dcaa571b.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../javascripts/navbar.js" defer></script>
+
+    <link rel="stylesheet" href="../stylesheets/styles.css">
+
 </head>
 
 <body>
@@ -50,27 +52,6 @@
             <img class="portrait" src="../images/placeholder.jpg" alt="placeholder">
         </div>
     </header>
-
-    <!-- Script to hide and unhide navbar-->
-    <script>
-
-        var sidenav = document.getElementById('navbar');
-
-        function showMenu() {
-            if(sidenav.style.display == "") {
-                sidenav.style.display = "flex";
-            } 
-            
-        }
-
-        function hideMenu() {
-            if(sidenav.style.display == "flex") {
-                sidenav.style.display = "";
-            }
-        }
-
-    </script>
-
 </body>
 
 </html>
