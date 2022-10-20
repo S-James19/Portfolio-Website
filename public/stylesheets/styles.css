@@ -61,12 +61,15 @@ h2 {
     padding: 1.5% 4%;
     background-color: rgba(30, 30, 30, 0.7);
     margin-bottom: 300px;
+    font-size: 1.5rem;
     
 }
 
 .navbar-options {
     flex: 1;
     text-align: right;
+    display: flex;
+    justify-content: right;
 }
 
 .logo {
@@ -162,6 +165,42 @@ h2 {
 /*--------------- Responsive ----------------*/
 
 @media(max-width: 880px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        margin-top: 5%;
+    }
+
+    .navbar-options li {
+        display: block;
+        text-align: center;
+        padding: 15% 0%;
+    }
+
+    .navbar-options {
+        flex: 0.4;
+        align-items: center;
+    }
+
+    .logo {
+        flex: 0
+    }
+
+    .socials {
+        order: 1;
+        flex: 0;
+    }
+
+    .socials a {
+        display: block;
+        padding: 20% 0;
+    }
+
     .introduction * {
         font-size: 0.75rem;
     }
@@ -173,6 +212,8 @@ h2 {
     .introduction-content {
         padding: 0 5%;
     }
+
+    
 }
 
 @media(max-width: 740px) {
@@ -184,6 +225,10 @@ h2 {
 @media(max-width: 600px) {
     .introduction * {
         font-size: 0.4rem;
+    }
+
+    .navbar {
+        font-size: 1.2rem;
     }
 }
 
@@ -205,4 +250,11 @@ h2 {
     .contactbtn {
         margin-top: 5%;
     }
+}
+
+@media(max-width: 380px) {
+    .navbar {
+        font-size: 0.8rem;
+    }
+
 }
