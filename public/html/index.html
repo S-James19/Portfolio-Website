@@ -57,12 +57,18 @@
         var sidenav = document.getElementById('navbar');
 
         function showMenu() {
-            sidenav.style.display = "flex";
+            if(sidenav.style.display == "") {
+                sidenav.style.display = "flex";
+            } 
+            
         }
 
         function hideMenu() {
-            sidenav.style.display = "none";
+            if(sidenav.style.display == "flex") {
+                sidenav.style.display = "";
+            }
         }
+
     </script>
 
 </body>
