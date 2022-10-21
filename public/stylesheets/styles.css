@@ -16,7 +16,6 @@
 
 body * {
     font-family: 'DefaultFont', Fallback, sans-serif;
-    color: white;
     text-decoration: none;
     list-style: none;
 }
@@ -39,6 +38,27 @@ h2 {
     font-size: 30px;
 }
 
+/*--------------- Buttons ----------------*/
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-default {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+    display: block;
+}
+
+.btn-default:hover {
+    background-color: rgba(30, 30, 30, 0.5);
+}
+
+
 /*--------------- ID Classes ----------------*/
 
 
@@ -50,11 +70,15 @@ h2 {
     height: 100vh;
     min-height: 350px;
     position: relative;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,146,0,0.9) 75%, rgba(0,0,0,0.9)), url(../images/header.jpg);
+    background-image: linear-gradient(to bottom, rgba(30,30,30,0.9), rgba(0,146,0,0.9) 75%, rgba(30,30,30,0.9)), url(../images/header.jpg);
     background-position: center;
     background-size: contain;
     position: relative;
     font-size: 15px;
+}
+
+.index * {
+    color: white;
 }
 
 
@@ -163,23 +187,29 @@ h2 {
     max-height: 400px;
 }
 
-.contactbtn {
-    background-color: transparent;
-    border: 2px solid white;
-    float: left;
-    padding: 15px;
-    margin-top: 30px;
-}
-
-.contactbtn:hover {
-    background-color: rgba(30, 30, 30, 0.5);
-}
-
 #coder {
     font-family: 'CodeFont';
 }
 
 /*--------------- Page Content ----------------*/
+
+.section {
+    width: 100%;
+}
+
+.about {
+    background-color: #1e1e1e;
+}
+
+.content {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
 /*--------------- Responsive ----------------*/
 
 @media(max-width: 880px) or (max-height: 600px) {
@@ -282,7 +312,7 @@ h2 {
         text-align: center;
     }
 
-    .button-container {
+    .btn-container-small-screen {
         display: flex;
         justify-content: center;
     }
