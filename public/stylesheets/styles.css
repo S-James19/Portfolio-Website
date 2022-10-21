@@ -76,7 +76,15 @@ hr {
 }
 
 
-/*--------------- ID Classes ----------------*/
+/*--------------- Colours ----------------*/
+
+.light-grey {
+    background-color: #1e1e1e;
+}
+
+.black {
+    background-color: #000000;
+}
 
 
 /*--------------- Header ----------------*/
@@ -148,11 +156,12 @@ hr {
     text-align: center;
 }
 
-.socials {
+#navbar .socials {
     flex: 0.15;
     text-align: center;
     display: flex;
     justify-content: center;
+    justify-content: space-aroud;
 }
 
 .socials i {
@@ -214,21 +223,35 @@ hr {
     width: 100%;
 }
 
-.section h1, .section p {
-    padding: 30px;
-}
-.about {
-    background-color: #1e1e1e;
-}
-
 .content {
     width: 80%;
     max-width: 1200px;
     margin: auto;
-    color: white;
     text-align: center;
+}
+
+.content * {
+    color: white;
+}
+
+.section-padding {
     padding: 100px 0;
 }
+
+.information h1, .information p {
+    padding: 30px;
+}
+
+/*--------------- Footer ----------------*/
+
+.footer .socials, .footer p {
+    padding: 10px;
+}
+
+.footer .socials i:hover {
+    color: #008001;
+}
+
 
 /*--------------- Responsive ----------------*/
 
@@ -245,6 +268,32 @@ hr {
         display: none;
     }
 
+    #navbar.socials {
+        order: 1;
+        flex: 0;
+        flex-direction: column;
+    }
+    
+    #navbar.socials a {
+        padding: 25% 0;
+    }
+
+    .navbar-options {
+        flex: 0.4;
+        align-items: center;
+    }
+
+    .navbar-options li {
+        display: block;
+        text-align: center;
+        padding: 15% 0%;
+    }
+
+    .logo {
+        flex: 0;
+        padding: 10% 0;
+    }
+    
     .menu-crossx {
         display: block;
     }
@@ -257,32 +306,6 @@ hr {
         margin-top: 5%;
         position: fixed;
         right: 0;
-    }
-
-    .navbar-options li {
-        display: block;
-        text-align: center;
-        padding: 15% 0%;
-    }
-
-    .navbar-options {
-        flex: 0.4;
-        align-items: center;
-    }
-
-    .logo {
-        flex: 0;
-        padding: 10% 0;
-    }
-
-    .socials {
-        order: 1;
-        flex: 0;
-        flex-direction: column;
-    }
-
-    .socials a {
-        padding: 25% 0;
     }
 
     .introduction * {
