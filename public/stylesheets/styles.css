@@ -66,6 +66,9 @@ h2 {
     background-color: rgba(30, 30, 30, 0.7);
     margin-bottom: 300px;
     font-size: 1.5rem;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
 }
 
 #navbar a:before {
@@ -115,20 +118,15 @@ h2 {
     padding: 0 5px;
 }
 
-.menu-bars {
-    width: 100%;
-    max-width: 30px;
-    position: absolute;
-    right: 3.5%;
-    top: 3.5%;
-    display: none;
-}
-
 .menu-crossx {
     width: 100%;
     max-width: 30px;
     color: white;
     padding: 15% 0;
+    display: none;
+}
+
+.menu-bars {
     display: none;
 }
 
@@ -181,6 +179,7 @@ h2 {
     font-family: 'CodeFont';
 }
 
+/*--------------- Page Content ----------------*/
 /*--------------- Responsive ----------------*/
 
 @media(max-width: 880px) or (max-height: 600px) {
@@ -189,15 +188,25 @@ h2 {
         align-items: center;
         width: 40%;
         height: 100%;
-        position: absolute;
+        position: fixed;
         right: 0;
         z-index: 1;
         padding-top: 5%;
         display: none;
     }
 
-    .menu-bars, .menu-crossx {
+    .menu-crossx {
         display: block;
+    }
+
+    .menu-bars {
+        width: 100%;
+        max-width: 30px;
+        display: block;
+        margin-right: 5%;
+        margin-top: 5%;
+        position: fixed;
+        right: 0;
     }
 
     .navbar-options li {
