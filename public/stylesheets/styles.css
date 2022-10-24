@@ -86,6 +86,10 @@ hr {
     background-color: #000000;
 }
 
+.dark-green {
+    background-color: #006312;
+}
+
 
 /*--------------- Header ----------------*/
 
@@ -240,6 +244,35 @@ hr {
 
 .information h1, .information p {
     padding: 30px;
+}
+
+/*--------------- Cards ----------------*/
+
+.card {
+    width: 100%;
+    max-width: 300px;
+    height: 400px;
+    max-height: 400px;
+    background-color: black;
+}
+
+.card-panel-top {
+    width: 100%;
+    height: 75%;
+}
+
+.card-img {
+    width: 100%;
+}
+
+.card-panel-bottom {
+    width: 100%;
+    height: 25%;
+    background-color: green;
+}
+
+.card-title {
+    padding: 0px 5%;
 }
 
 /*--------------- Footer ----------------*/
