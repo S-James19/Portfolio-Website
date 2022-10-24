@@ -248,8 +248,12 @@ hr {
     padding: 100px 0;
 }
 
-.information h1, .information p {
+.information p {
     padding: 30px;
+}
+
+.information h1 {
+    padding: 0 30px 30px;
 }
 
 /*--------------- Cards ----------------*/
@@ -402,7 +406,7 @@ hr {
         width: 20px;
     }
 
-    .cards {
+    .card-container {
         flex-direction: column;
     }
 
