@@ -67,6 +67,12 @@ hr {
     align-self: center;
 }
 
+.btn-card {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+}
+
 .btn-default:hover {
     background-color: rgba(30, 30, 30, 0.5);
 }
@@ -254,10 +260,31 @@ hr {
 }
 
 .card {
+    position: relative;
     width: 300px;
     height: 300px;
     margin: 10px;
     border-radius: 10px;
+}
+
+.card-content {
+    border-radius: 10px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(30, 30, 30, 0.8);
+    transition: 0.3s;
+    opacity: 0;
+    text-align: left;
+}
+
+.card-content:hover {
+    opacity: 100%;
+}
+
+.card-content p {
+    padding: 5% 5% 0;
 }
 
 .card-image {
@@ -265,18 +292,6 @@ hr {
     height: 75%;
     margin-bottom: 10%;
     border-radius: 10px;
-}
-
-.card-title {
-    text-align: left;
-    margin: 0 5%;
-    font-weight: 700;
-}
-
-#card1 {
-    background-image: url(../images/placeholder.jpg);
-    background-position: center;
-    background-size: cover;
 }
 
 /*--------------- Footer ----------------*/
