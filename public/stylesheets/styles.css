@@ -38,6 +38,10 @@ h2 {
     font-size: 2rem;
 }
 
+h3 {
+    font-size: 1.5rem;
+}
+
 p {
     font-size: 1.25rem;
 }
@@ -293,6 +297,7 @@ hr {
     height: 25%;
     width: 100%;
     max-width: 100%;
+    overflow: auto;
 }
 
 .card-title *, .card-information *  {
@@ -310,6 +315,7 @@ hr {
     background-color: rgba(30, 30, 30, 0.7);
     opacity: 0;
     transition: 0.4s;
+    overflow: auto;
 }
 
 .card-information:hover {
@@ -401,12 +407,20 @@ hr {
         font-size: 0.6rem;
     }
 
-    .section h1 {
+    .content > h1 {
         font-size: 10vw;
     }
 
-    .section p {
+    .content > p {
         font-size: 4vw;
+    }
+
+    .cards p, .cards a  {
+        font-size: 3vmin;
+    }
+
+    .cards h3 {
+        font-size: 4.5vmin;
     }
 }
 
