@@ -196,6 +196,11 @@ hr {
 
 /*--------------- Introduction ----------------*/
 
+.portrait {
+    max-width: 400px;
+    max-height: 500px;
+}
+
 .introduction {
     margin: auto;
     width: 80%;
@@ -220,11 +225,6 @@ hr {
 .introduction-content {
     text-align: left;
     padding: 0px 50px;
-}
-
-.portrait {
-    max-width: 400px;
-    max-height: 400px;
 }
 
 #coder {
