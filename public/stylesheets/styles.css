@@ -258,6 +258,31 @@ hr {
 
 /*--------------- Cards ----------------*/
 
+.cards {
+    display: flex;
+    justify-content: center;
+}
+
+.card-container {
+    width: 30vw;
+    height: 40vw;
+    max-width: 300px;
+    max-height: 400px;
+    background-color: black;
+}
+
+.card-image {
+    height: 75%;
+    width: 100%;
+    background-color: blue;
+}
+
+.card-title {
+    height: 25%;
+    width: 100%;
+    background-color: red;
+}
+
 /*--------------- Footer ----------------*/
 
 .footer .socials, .footer p {
