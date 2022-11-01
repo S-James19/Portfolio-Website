@@ -1,4 +1,5 @@
-/* color scheme: https://www.schemecolor.com/black-and-green.php */
+/* color scheme 1: https://www.schemecolor.com/black-and-green.php */
+/* color scheme 2: https://www.schemecolor.com/red-white-black.php */
 
 /* Fonts */
 
@@ -8,8 +9,8 @@
 }
 
 @font-face {
-    font-family: 'CodeFont';
-    src: url('../fonts/Source_Code_Pro/SourceCodePro-VariableFont_wght.ttf');
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Medium.ttf');
 }
 
 /*--------------- General ----------------*/
@@ -19,9 +20,10 @@ html {
     scroll-behavior: smooth;
 }
 body * {
-    font-family: 'DefaultFont', Fallback, sans-serif;
+    font-family: 'Roboto', Fallback, sans-serif;
     text-decoration: none;
     list-style: none;
+    letter-spacing: 2px;
 }
 
 * {
@@ -63,12 +65,17 @@ hr {
 
 .btn-default {
     background-color: transparent;
-    border: 2px solid white;
+    border: 2px solid;
     color: white;
     padding: 15px;
     margin-top: 30px;
     display: block;
     align-self: center;
+}
+
+.contact-btn {
+    color: #C10206;
+    border-color: #C10206;
 }
 
 .btn-card {
@@ -78,26 +85,62 @@ hr {
 }
 
 .btn-default:hover {
-    background-color: rgba(30, 30, 30, 0.5);
+    background-color: rgba(193, 2, 6, 0.1);
 }
 
 .btn-about:hover {
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.25);
 }
 
 
 /*--------------- Colours ----------------*/
 
-.light-grey {
-    background-color: #1e1e1e;
-}
-
 .black {
-    background-color: #000000;
+    background-color: #010A10;
 }
 
-.dark-green {
-    background-color: #006312;
+.black-text {
+    color: #010A10;
+}
+
+.light-red {
+    background-color: #C10206;
+}
+
+.light-red-text {
+    color: #C10206;
+}
+
+.dark-red {
+    background-color: #A50113;
+}
+
+.dark-red-text {
+    color: #A50113;
+}
+
+.simply-white {
+    background-color: #FFFBF2;
+}
+
+.simply-white-text {
+    color: #FFFBF2;
+}
+
+.sky-grey {
+    background-color: #DFE2DB;
+}
+
+.sky-grey-text {
+    color: #DFE2DB;
+}
+
+.dark-grey {
+    background-color: #211D21;
+}
+
+.dark-grey-text {
+    color: #211D21;
 }
 
 
@@ -109,15 +152,10 @@ hr {
     height: 100vh;
     min-height: 350px;
     position: relative;
-    background-image: linear-gradient(to bottom, rgba(30,30,30,0.9), rgba(0,146,0,0.9) 75%, rgba(30,30,30,0.9)), url(../images/header.jpg);
     background-position: center;
     background-size: contain;
     position: relative;
     font-size: 15px;
-}
-
-.index * {
-    color: white;
 }
 
 
@@ -126,7 +164,7 @@ hr {
 #navbar {
     display: flex;
     padding: 1.5% 4%;
-    background-color: rgba(30, 30, 30, 0.7);
+    background-color: #211D21;
     margin-bottom: 300px;
     font-size: 1.5rem;
     position: fixed;
@@ -134,11 +172,15 @@ hr {
     z-index: 3;
 }
 
+#navbar * {
+    color: white;
+}
+
 #navbar a:before {
     content: "";
     height: 1px;
     width: 0%;
-    background-color: #008001;
+    background-color: #C10206;
     display: block;
     margin: auto;
 }
@@ -216,6 +258,7 @@ hr {
 
 .introduction h1 {
     font-size: 4em;
+    padding: 5% 0;
 }
 
 .introduction h2 {
@@ -225,6 +268,7 @@ hr {
 .introduction-content {
     text-align: left;
     padding: 0px 50px;
+    color: #010A10;
 }
 
 #coder {
@@ -263,17 +307,17 @@ hr {
 /*--------------- Footer ----------------*/
 
 .footer .socials, .footer p {
-    padding: 10px;
+    padding: 15px;
 }
 
 .footer .socials i:hover {
-    color: #008001;
+    color: #C10206;
 }
 
 
 /*--------------- Responsive ----------------*/
 
-@media(max-width: 880px) or (max-height: 600px) {
+@media(max-width: 1150px) or (max-height: 600px) {
     #navbar {
         flex-direction: column;
         align-items: center;
@@ -334,10 +378,6 @@ hr {
         position: fixed;
         right: 0;
     }
-
-    .introduction * {
-        font-size: 0.75rem;
-    }
     
     .introduction-content {
         padding: 0 5%;
@@ -349,24 +389,26 @@ hr {
     }
 }
 
-@media(max-width: 740px) or (max-height: 480px) {
-    .introduction * {
-        font-size: 0.6rem;
-    }
+@media(max-width: 740px) {
 
     .content > h1 {
         font-size: 10vw;
     }
 
+    .introduction-content > h1 {
+        font-size: 7vw;
+    }
+
+    .introduction-content > h2 {
+        font-size: 3.5vw;
+    }
+
     .content > p {
         font-size: 4vw;
     }
-}
 
-@media(max-width: 600px) {
-
-    .introduction * {
-        font-size: 0.4rem;
+    .footer .socials i {
+        width: 4.5vw;
     }
 }
 

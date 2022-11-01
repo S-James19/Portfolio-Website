@@ -36,6 +36,10 @@
     float: right;
 }
 
+.card-information a:hover {
+    color: #C10206;
+}
+
 .card-image {
     height: 75%;
     width: 100%;
