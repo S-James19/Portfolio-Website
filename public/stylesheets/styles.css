@@ -1,5 +1,4 @@
-/* color scheme 1: https://www.schemecolor.com/black-and-green.php */
-/* color scheme 2: https://www.schemecolor.com/red-white-black.php */
+/* color scheme: https: //visme.co/blog/website-color-schemes/ 24. */
 
 /* Fonts */
 
@@ -51,8 +50,27 @@ p {
 hr {
     margin: auto;
     width: 25%;
-    height: 2px;
+    height: 3px;
     background-color: white;
+}
+
+/*--------------- Scroll Bar ----------------*/
+
+html::-webkit-scrollbar {
+    width: 2vw;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #DEF2F1;
+}
+
+html::-webkit-scrollbar-thumb:active {
+    background-color: #F3FFFF;
+}
+
+
+html::-webkit-scrollbar-track {
+        background-color: #2B2B2B;
 }
 
 /*--------------- Buttons ----------------*/
@@ -66,7 +84,7 @@ hr {
 .btn-default {
     background-color: transparent;
     border: 2px solid;
-    color: white;
+    color: #3AAFA9;
     padding: 15px;
     margin-top: 30px;
     display: block;
@@ -74,8 +92,8 @@ hr {
 }
 
 .contact-btn {
-    color: #C10206;
-    border-color: #C10206;
+    color: #3AAFA9;
+    border-color: #3AAFA9;
 }
 
 .btn-card {
@@ -85,7 +103,7 @@ hr {
 }
 
 .btn-default:hover {
-    background-color: rgba(193, 2, 6, 0.1);
+    background-color: rgba(58, 175, 169, 0.2);
 }
 
 .btn-about:hover {
@@ -95,52 +113,44 @@ hr {
 
 /*--------------- Colours ----------------*/
 
-.black {
-    background-color: #010A10;
+.dark { /* rgba(23, 37, 42, 1) */
+    background-color: #17252A;
 }
 
-.black-text {
-    color: #010A10;
+.dark-text {
+    color: #17252A;
 }
 
-.light-red {
-    background-color: #C10206;
+.little-dark { /* rgba(43, 122, 120, 1) */
+    background-color: #2B7A78;
 }
 
-.light-red-text {
-    color: #C10206;
+.little-dark-text {
+    color: #2B7A78;
 }
 
-.dark-red {
-    background-color: #A50113;
+.middle { /* rgba(58, 175, 169, 1) */
+    background-color: #3AAFA9;
 }
 
-.dark-red-text {
-    color: #A50113;
+.middle-text {
+    color: #3AAFA9;
 }
 
-.simply-white {
-    background-color: #FFFBF2;
+.light { /* rgba(222, 242, 241, 1) */
+    background-color: #DEF2F1;
 }
 
-.simply-white-text {
-    color: #FFFBF2;
+.light-text {
+    color: #DEF2F1;
 }
 
-.sky-grey {
-    background-color: #DFE2DB;
+.very-light { /* rgba(243, 255, 255, 1) */
+    background-color: #F3FFFF;
 }
 
-.sky-grey-text {
-    color: #DFE2DB;
-}
-
-.dark-grey {
-    background-color: #211D21;
-}
-
-.dark-grey-text {
-    color: #211D21;
+.very-light-text {
+    color: #F3FFFF;
 }
 
 
@@ -164,12 +174,12 @@ hr {
 #navbar {
     display: flex;
     padding: 1.5% 4%;
-    background-color: #211D21;
     margin-bottom: 300px;
     font-size: 1.5rem;
     position: fixed;
     width: 100%;
     z-index: 3;
+    background-color: rgba(23, 37, 42, 1);;
 }
 
 #navbar * {
@@ -180,7 +190,7 @@ hr {
     content: "";
     height: 1px;
     width: 0%;
-    background-color: #C10206;
+    background-color: #3AAFA9;
     display: block;
     margin: auto;
 }
@@ -311,7 +321,7 @@ hr {
 }
 
 .footer .socials i:hover {
-    color: #C10206;
+    color: #3AAFA9;
 }
 
 
@@ -333,6 +343,7 @@ hr {
         justify-content: none;
         padding: 10% 0;
         direction: rtl;
+        background-color: rgba(23, 37, 42, 0.9);
     }
 
     .navbar-options {
@@ -386,6 +397,23 @@ hr {
     .portrait {
         width: 65%;
         min-width: 100px;
+    }
+
+    #navbar::-webkit-scrollbar {
+        width: 1vw;
+    }
+
+    #navbar::-webkit-scrollbar-thumb {
+        background-color: #DEF2F1;
+    }
+
+    #navbar::-webkit-scrollbar-thumb:active {
+        background-color: #F3FFFF;
+    }
+
+
+    #navbar::-webkit-scrollbar-track {
+        background-color: #2B2B2B;
     }
 }
 

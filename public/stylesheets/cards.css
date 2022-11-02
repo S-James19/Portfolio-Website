@@ -27,7 +27,7 @@
     background-color: #1e1e1e;
     border-radius: 3%;
     position: relative;
-    margin: 1%;
+    margin: 2%;
 }
 
 .card-information a {
@@ -37,7 +37,7 @@
 }
 
 .card-information a:hover {
-    color: #C10206;
+    color: #2B7A78;
 }
 
 .card-image {
