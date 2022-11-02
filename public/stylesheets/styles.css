@@ -51,7 +51,7 @@ hr {
     margin: auto;
     width: 25%;
     height: 3px;
-    background-color: white;
+    border: none;
 }
 
 /*--------------- Scroll Bar ----------------*/
@@ -84,7 +84,7 @@ html::-webkit-scrollbar-track {
 .btn-default {
     background-color: transparent;
     border: 2px solid;
-    color: #3AAFA9;
+    color: #FEFFFF;
     padding: 15px;
     margin-top: 30px;
     display: block;
@@ -92,8 +92,8 @@ html::-webkit-scrollbar-track {
 }
 
 .contact-btn {
-    color: #3AAFA9;
-    border-color: #3AAFA9;
+    color: #FEFFFF;
+    border-color: #FEFFFF;
 }
 
 .btn-card {
@@ -103,11 +103,11 @@ html::-webkit-scrollbar-track {
 }
 
 .btn-default:hover {
-    background-color: rgba(58, 175, 169, 0.2);
+    background-color: rgba(243, 255, 255, 0.25);
 }
 
 .btn-about:hover {
-    background-color: rgba(255,255,255,0.25);
+    background-color: rgba(58, 175, 169, 0.1);
 }
 
 
@@ -267,7 +267,7 @@ html::-webkit-scrollbar-track {
 }
 
 .introduction h1 {
-    font-size: 4em;
+    font-size: 6em;
     padding: 5% 0;
 }
 
@@ -275,10 +275,15 @@ html::-webkit-scrollbar-track {
     font-size: 1.75em;
 }
 
+.introduction h2:hover {
+    color: #2B7A78;
+    transition: 0.25s;
+}
+
 .introduction-content {
     text-align: left;
     padding: 0px 50px;
-    color: #010A10;
+    color: #FEFFFF;
 }
 
 #coder {
@@ -298,10 +303,6 @@ html::-webkit-scrollbar-track {
     text-align: center;
 }
 
-.content * {
-    color: white;
-}
-
 .section-padding {
     padding: 100px 0;
 }
@@ -312,6 +313,18 @@ html::-webkit-scrollbar-track {
 
 .information h1 {
     padding: 0 30px 30px;
+}
+
+.about-content * {
+    color: #3AAFA9;
+}
+
+.project-content * {
+    color: #F3FFFF;
+}
+
+.footer-content * {
+    color: #F3FFFF;
 }
 
 /*--------------- Footer ----------------*/
@@ -415,11 +428,8 @@ html::-webkit-scrollbar-track {
     #navbar::-webkit-scrollbar-track {
         background-color: #2B2B2B;
     }
-}
 
-@media(max-width: 740px) {
-
-    .content > h1 {
+        .content > h1 {
         font-size: 10vw;
     }
 
