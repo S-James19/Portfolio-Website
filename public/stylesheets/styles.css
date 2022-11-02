@@ -122,11 +122,11 @@ html::-webkit-scrollbar-track {
 }
 
 .little-dark { /* rgba(43, 122, 120, 1) */
-    background-color: #2B7A78;
+    background-color: #108b87;
 }
 
 .little-dark-text {
-    color: #2B7A78;
+    color: #108b87;
 }
 
 .middle { /* rgba(58, 175, 169, 1) */
@@ -231,7 +231,7 @@ html::-webkit-scrollbar-track {
 }
 
 .socials i {
-    padding: 0 5px;
+    padding: 0 10px;
 }
 
 .menu-crossx {
