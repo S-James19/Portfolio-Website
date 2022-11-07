@@ -27,10 +27,9 @@
     border-radius: 3%;
     position: relative;
     margin: 2%;
-    font-size: 1rem;
 }
 
-.card-container p, a {
+.card-container p, .card-container a {
     font-size: clamp(0.7rem, 2.6vw, 1rem);
 }
 

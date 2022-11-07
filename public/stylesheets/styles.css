@@ -319,13 +319,27 @@ html::-webkit-scrollbar-track {
 
 /*--------------- Footer ----------------*/
 
-.footer .socials, .footer p {
-    padding: 15px;
-}
-
 .footer .socials i:hover {
     color: #3AAFA9;
 }
+
+.footer p {
+    font-size: clamp(0.85rem, 2.21vw, 1.36rem);
+}
+
+.footer p {
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+
+.footer .socials {
+    padding-top: 1%;
+    padding-bottom: 2%;
+    font-size: clamp(0.85rem, 2.21vw, 1.36rem);
+}
+
+
+
 
 
 /*--------------- Responsive ----------------*/
