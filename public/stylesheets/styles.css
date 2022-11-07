@@ -43,7 +43,7 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(0.6rem, 4vw, 2.4rem);
+    font-size: clamp(0.8rem, 4vw, 2.4rem);
 }
 
 p {
@@ -149,6 +149,7 @@ html::-webkit-scrollbar-track {
     color: #F3FFFF;
 }
 
+/*--------------- Effects ----------------*/
 
 /*--------------- Header ----------------*/
 

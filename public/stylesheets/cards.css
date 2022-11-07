@@ -12,8 +12,7 @@
     background-image: url(../images/placeholder.jpg);
 }
 
-/*--------------- General ----------------*/
-
+/*--------------- Cards ----------------*/
 .cards {
     display: flex;
     justify-content: center;
@@ -28,6 +27,15 @@
     border-radius: 3%;
     position: relative;
     margin: 2%;
+    font-size: 1rem;
+}
+
+.card-container p, a {
+    font-size: clamp(0.7rem, 2.6vw, 1rem);
+}
+
+.card-container h3 {
+    font-size: clamp(1rem, 2.6vw, 2rem);
 }
 
 .card-information a {
