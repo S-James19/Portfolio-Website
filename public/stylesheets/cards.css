@@ -92,20 +92,12 @@
             align-items: center;
         }
 
-    .cards h3 {
-        font-size: 4vmin;
+    .card-container {
+        width: 58.3vw;
+        height: 75vw;
+        background-color: #1e1e1e;
+        border-radius: 3%;
+        position: relative;
+        margin: 2%;
     }
-    
-    .cards p, .cards a {
-        font-size: 3.5vmin;
-    }
-
-.card-container {
-    width: 58.3vw;
-    height: 75vw;
-    background-color: #1e1e1e;
-    border-radius: 3%;
-    position: relative;
-    margin: 2%;
-}
 }
