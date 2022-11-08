@@ -27,6 +27,7 @@
     border-radius: 3%;
     position: relative;
     margin: 2%;
+    color: white;
 }
 
 .card-container p, .card-container a {
@@ -85,10 +86,6 @@
 
 .card-information:hover {
     opacity: 100;
-}
-
-.card-container:hover {
-    box-shadow: 0 0.1vh 1vh 0.5vh;
 }
 
 /*--------------- Responsive ----------------*/
