@@ -196,7 +196,7 @@ html::-webkit-scrollbar-track {
     transition: 0.15s ease-in;
 }
 
-#navbar a {
+.navbar-options a {
     position: relative;
     display: inline-block;
 }
@@ -226,13 +226,12 @@ html::-webkit-scrollbar-track {
     justify-content: space-aroud;
 }
 
-.socials i {
-    padding: 0 10px;
+.socials a {
+    padding: 0 5%;
 }
 
 .menu-crossx {
     width: 100%;
-    max-width: 30px;
     color: white;
     padding: 15% 0;
     display: none;
@@ -348,53 +347,45 @@ html::-webkit-scrollbar-track {
 @media(max-width: 1150px) or (max-height: 600px) {
     #navbar {
         flex-direction: column;
-        align-items: center;
-        width: 40%;
-        height: 100%;
+        width: 60vmin;
+        height: 100vh;
         position: fixed;
+        align-items: flex-start;
+        justify-content: center;
         right: 0;
         z-index: 1;
         display: none;
         overflow-y: auto;
-        direction: ltr;
-        justify-content: none;
-        padding: 10% 0;
         direction: rtl;
         background-color: rgba(23, 37, 42, 0.9);
+        font-size: clamp(0.75rem, 9vmin, 2.5rem);
+        padding: 0 2% 0 0;
     }
 
     .navbar-options {
         flex: 0;
-        padding: 5% 0;
+        width: 100%;
+        margin: 10% auto;
     }
 
     #navbar .socials {
         order: 2;
-        flex-direction: column;
         flex: 0;
-        padding: 10% 0;
+        padding-right: 6%;
     }
-
-    #navbar .socials a {
-        padding: 15% 0;
+    .logo {
+        display: none;
     }
 
     .navbar-options li {
         display: block;
-        text-align: center;
-        padding: 15% 0%;
-    }
-
-    .logo {
-        padding: 5% 0;
-        flex: 0;
-    }
-    
+        padding: 5% 0%;
+    }   
     .menu-crossx {
         display: block;
-        flex: 0;
-        padding: 5% 0;
-        width: 4.5vw;
+        width: clamp(1rem, 9vmin, 2.5rem);
+        padding: 0;
+        float: right;
     }
 
     .menu-bars {
