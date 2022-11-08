@@ -317,8 +317,14 @@ html::-webkit-scrollbar-track {
 
 /*--------------- About Me ----------------*/
 
-.about-padding {
-    padding: 5%;
+.vertical-line {
+    width: 1%;
+    height: 100%;
+    background-color: white;
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .about-section, .about-content-left, .about-content-right {
@@ -328,10 +334,12 @@ html::-webkit-scrollbar-track {
 
 .about-content-left, .about-content-right {
     flex: 0.8;
+    margin: 0 2.5%;
 }
 
 .about-title {
     flex: 0.2;
+    position: relative;
 }
 
 .about-img {
@@ -469,6 +477,10 @@ html::-webkit-scrollbar-track {
 
     .about-section * {
         text-align: center;
+    }
+
+    .about-section .vertical-line {
+        display: none;
     }
 }
 
