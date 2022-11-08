@@ -352,6 +352,75 @@ html::-webkit-scrollbar-track {
     margin-bottom: 25%;
 }
 
+/*--------------- Graph ----------------*/
+
+.graph-container {
+    width: 100%;
+    flex: 0.8;
+    display: grid;
+    grid-template-columns: 10% 90%;
+}
+
+.graph-content {
+    border-left: 4px solid #1e1e1e;
+    border-bottom: 4px solid #1e1e1e;
+    padding-bottom: 5%;
+}
+
+.graph-bar {
+    height: clamp(25px, 7.5vh, 80px);
+    width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3%;
+    margin: 3% 0;
+}
+
+#x-axis {
+    grid-column: 2;
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#y-axis {
+    text-align: right;
+    margin-right: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.graph-container h3 {
+    font-size: clamp(0.8rem, 3vmin, 2.4rem);
+}
+
+#Cpp {
+    background-color: green;
+    width: 70%;
+}
+
+#Csharp {
+    background-color: red;
+    width: 70%;
+}
+
+#Jscript {
+    background-color: blue;
+    width: 60%;
+}
+
+#Html {
+    background-color: purple;
+    width: 80%;
+}
+
+#Css {
+    background-color: orange;
+    width: 80%;
+}
+
 /*--------------- Footer ----------------*/
 
 .footer p {
@@ -481,6 +550,10 @@ html::-webkit-scrollbar-track {
 
     .about-section .vertical-line {
         display: none;
+    }
+
+    .graph-container {
+        width: 80%;
     }
 }
 
