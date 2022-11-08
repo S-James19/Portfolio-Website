@@ -192,8 +192,8 @@ html::-webkit-scrollbar-track {
 }
 
 #navbar a:hover:before {
-    width: 100%;
-    transition: 0.15s ease-in;
+    width: 50%;
+    transition: 0.3s ease-in;
 }
 
 .navbar-options a {
