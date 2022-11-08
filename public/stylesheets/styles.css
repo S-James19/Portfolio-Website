@@ -80,8 +80,7 @@ html::-webkit-scrollbar-track {
     background-color: transparent;
     border: 2px solid;
     color: #1e1e1e;
-    padding: 20px;;
-    margin-top: 5%;
+    padding: 20px;
     display: block;
     align-self: center;
 }
@@ -123,12 +122,12 @@ html::-webkit-scrollbar-track {
     color: #ff4778;
 }
 
-.color3 { /* rgba(255, 124, 159, 1) */
-    background-color: #ff7c9f;
+.color3 { /* rgba(247, 162, 255, 1) */
+    background-color: #F7A2FF;
 }
 
 .color3-text {
-    background-color: #FF74B1;
+    background-color: #F7A2FF;
 }
 
 
@@ -335,11 +334,16 @@ html::-webkit-scrollbar-track {
 .about-content-left, .about-content-right {
     flex: 0.8;
     margin: 0 2.5%;
+    justify-content: center;
 }
 
 .about-title {
     flex: 0.2;
     position: relative;
+}
+
+.about-title-text {
+    margin-right: 10%;
 }
 
 .about-img {
@@ -375,6 +379,12 @@ html::-webkit-scrollbar-track {
     justify-content: space-between;
     padding: 0 3%;
     margin: 3% 0;
+    background-color: #F7A2FF;
+}
+
+.graph-bar:hover {
+    background-color: #ee45fd;
+    transition: 0.3s ease-in-out;
 }
 
 #x-axis {
@@ -397,27 +407,22 @@ html::-webkit-scrollbar-track {
 }
 
 #Cpp {
-    background-color: green;
     width: 70%;
 }
 
 #Csharp {
-    background-color: red;
     width: 70%;
 }
 
 #Jscript {
-    background-color: blue;
     width: 60%;
 }
 
 #Html {
-    background-color: purple;
     width: 80%;
 }
 
 #Css {
-    background-color: orange;
     width: 80%;
 }
 
@@ -538,6 +543,8 @@ html::-webkit-scrollbar-track {
     
     .about-content-left, .about-section {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .about-content-right {
