@@ -36,14 +36,17 @@ hr {
 
 h1 {
     font-size: clamp(1.5rem, 10vmin, 6rem);
+    font-weight: 900;
 }
 
 h2 {
     font-size: clamp(0.8rem, 4vmin, 2.4rem);
+    font-weight: 500;
 }
 
 p {
     font-size: clamp(1rem, 2.6vmin, 1.6rem);
+    font-weight: 100;
 }
 
 /*--------------- Scroll Bar ----------------*/
@@ -257,8 +260,7 @@ html::-webkit-scrollbar-track {
 }
 
 .introduction h1 {
-    padding: 5% 0;
-    
+    padding: 5% 0; 
 }
 
 .introduction h2:hover {
