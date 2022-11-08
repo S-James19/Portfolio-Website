@@ -30,17 +30,18 @@
 }
 
 .card-container p, .card-container a {
-    font-size: clamp(0.7rem, 2.6vw, 1rem);
+    font-size: clamp(1rem, 2.6vw, 1rem);
 }
 
 .card-container h3 {
-    font-size: clamp(1rem, 2.6vw, 2rem);
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
 }
 
 .card-information a {
     text-decoration: underline;
     display: block;
     float: right;
+    color: rgba(243, 239, 254, 1);
 }
 
 .card-information a:hover {
@@ -88,7 +89,6 @@
 
 .card-container:hover {
     box-shadow: 0 0.1vh 1vh 0.5vh;
-    color: rgba(255, 255, 255, 0.5)
 }
 
 /*--------------- Responsive ----------------*/
@@ -100,8 +100,8 @@
         }
 
     .card-container {
-        width: 58.3vw;
-        height: 75vw;
+        width: 77vw;
+        height: 100vw;
         background-color: #1e1e1e;
         border-radius: 3%;
         position: relative;
