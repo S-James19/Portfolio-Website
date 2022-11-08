@@ -148,7 +148,15 @@ html::-webkit-scrollbar-track {
     color: white;
 }
 
-/*--------------- Effects ----------------*/
+/*--------------- Text ----------------*/
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
 
 /*--------------- Header ----------------*/
 
@@ -287,6 +295,10 @@ html::-webkit-scrollbar-track {
     text-align: center;
 }
 
+.content-large{
+    width: 90%;
+}
+
 .section-padding {
     padding: 100px 0;
 }
@@ -297,6 +309,29 @@ html::-webkit-scrollbar-track {
 
 .information h1 {
     padding: 0 30px 30px;
+}
+
+/*--------------- About Me ----------------*/
+
+.about-section, .about-content {
+    display: flex;
+    align-items: center;
+}
+
+.about-content {
+    flex: 0.8;
+}
+
+.about-title {
+    flex: 0.2;
+}
+
+.about-img {
+    width: clamp(50px, 40vmin, 400px);
+}
+
+.about-section h1 {
+    font-size: clamp(1.5rem, 6vmin, 3rem);
 }
 
 /*--------------- Footer ----------------*/
@@ -406,6 +441,16 @@ html::-webkit-scrollbar-track {
 
     #navbar::-webkit-scrollbar-track {
         background-color: #2B2B2B;
+    }
+}
+
+@media(max-width: 720px) {
+    .about-img {
+        width: clamp(50px, 75vmin, 300px);
+    }
+    
+    .about-content, .about-section {
+        flex-direction: column;
     }
 }
 
