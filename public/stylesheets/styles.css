@@ -22,7 +22,7 @@ body * {
     font-family: 'Roboto', Fallback, sans-serif;
     text-decoration: none;
     list-style: none;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 * {
@@ -223,10 +223,9 @@ html::-webkit-scrollbar-track {
     text-align: center;
     display: flex;
     justify-content: center;
-    justify-content: space-aroud;
 }
 
-.socials a {
+#navbar .socials a {
     padding: 0 5%;
 }
 
@@ -338,9 +337,9 @@ html::-webkit-scrollbar-track {
     font-size: clamp(0.85rem, 2.21vw, 1.36rem);
 }
 
-
-
-
+.footer .socials a {
+    padding: 0 .5%;
+}
 
 /*--------------- Responsive ----------------*/
 
