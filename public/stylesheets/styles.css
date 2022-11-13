@@ -411,6 +411,23 @@ html::-webkit-scrollbar-track {
     color: #ff89a8;
 }
 
+/*--------------- Contact Form ----------------*/
+
+.contact-form {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 50px;
+}
+
+.contact-form label {
+    display: block;
+}
+
+.contact-form-message {
+    grid-column: span 2;
+}
+
 /*--------------- Graph ----------------*/
 
 .graph-container {
