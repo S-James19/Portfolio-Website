@@ -49,6 +49,10 @@ p {
     font-weight: 100;
 }
 
+.no-margin {
+    margin: 0;
+}
+
 /*--------------- Scroll Bar ----------------*/
 
 html::-webkit-scrollbar {
@@ -306,8 +310,44 @@ html::-webkit-scrollbar-track {
     padding: clamp(50px, 5%, 150px) 0;
 }
 
+.sub-section,
+.sub-section-left,
+.sub-section-right {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.sub-section-left,
+.sub-section-right {
+    flex: 0.8;
+    margin: 0 2.5%;
+    justify-content: center;
+}
+
+.sub-section h2 {
+    font-size: clamp(1.5rem, 6vmin, 3rem);
+    font-weight: 900;
+}
+
 .sub-section-padding {
     padding: clamp(50px, 5%, 150px) 0;
+}
+
+.sub-section-text {
+    margin-right: 10%;
+}
+
+.section-column {
+    flex-direction: column;
+}
+
+.section-right {
+    align-items: flex-end;
+}
+
+.section-left {
+    align-items: flex-start;
 }
 
 .information p {
@@ -317,8 +357,6 @@ html::-webkit-scrollbar-track {
 .information h1 {
     padding: 0 3% 3%;
 }
-
-/*--------------- About Me ----------------*/
 
 .vertical-line {
     width: 1%;
@@ -330,36 +368,48 @@ html::-webkit-scrollbar-track {
     top: 0;
 }
 
-.sub-section, .sub-section-left, .sub-section-right {
-    display: flex;
-    align-items: center;
-}
+/*--------------- About Me ----------------*/
 
-.sub-section-left, .sub-section-right {
-    flex: 0.8;
-    margin: 0 2.5%;
-    justify-content: center;
-}
-
-.sub-section h2 {
-    font-size: clamp(1.5rem, 6vmin, 3rem);
-    font-weight: 900;
-    margin-bottom: 25%;
-}
 
 .about-title {
     flex: 0.2;
     position: relative;
 }
 
-.about-title-text {
-    margin-right: 10%;
-}
 
 .about-img {
     width: clamp(50px, 40vmin, 400px);
 }
 
+/*--------------- Contact ----------------*/
+
+.contact-information, .contact-socials {
+    margin: 20px 0;
+}
+
+.contact-information h3 {
+    margin: 15px 0;
+}
+
+.contact-information p {
+    padding: 0;
+}
+
+.contact-socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-socials i {
+    font-size: clamp(30px, 2.5vw, 40px);
+    color: white;
+    margin: 7.5px 0;
+}
+
+.contact-socials i:hover {
+    color: #ff89a8;
+}
 
 /*--------------- Graph ----------------*/
 
