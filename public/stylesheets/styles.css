@@ -85,6 +85,10 @@ html::-webkit-scrollbar-track {
     align-self: center;
 }
 
+.btn-introduction {
+    margin-top: clamp(20px, 10%, 50px);
+}
+
 .btn-card {
     position: absolute;
     right: 5%;
@@ -123,7 +127,7 @@ html::-webkit-scrollbar-track {
 }
 
 .color3 { /* rgba(247, 162, 255, 1) */
-    background-color: #F7A2FF;
+    background-color: #ff89a8;
 }
 
 .color3-text {
@@ -299,11 +303,11 @@ html::-webkit-scrollbar-track {
 }
 
 .section-padding {
-    padding: 5% 0;
+    padding: clamp(50px, 5%, 150px) 0;
 }
 
 .sub-section-padding {
-    padding: 8% 0;
+    padding: clamp(50px, 5%, 150px) 0;
 }
 
 .information p {
