@@ -330,15 +330,21 @@ html::-webkit-scrollbar-track {
     top: 0;
 }
 
-.about-section, .about-content-left, .about-content-right {
+.sub-section, .sub-section-left, .sub-section-right {
     display: flex;
     align-items: center;
 }
 
-.about-content-left, .about-content-right {
+.sub-section-left, .sub-section-right {
     flex: 0.8;
     margin: 0 2.5%;
     justify-content: center;
+}
+
+.sub-section h2 {
+    font-size: clamp(1.5rem, 6vmin, 3rem);
+    font-weight: 900;
+    margin-bottom: 25%;
 }
 
 .about-title {
@@ -354,11 +360,6 @@ html::-webkit-scrollbar-track {
     width: clamp(50px, 40vmin, 400px);
 }
 
-.about-section h2 {
-    font-size: clamp(1.5rem, 6vmin, 3rem);
-    font-weight: 900;
-    margin-bottom: 25%;
-}
 
 /*--------------- Graph ----------------*/
 
@@ -545,21 +546,21 @@ html::-webkit-scrollbar-track {
         width: clamp(50px, 75vmin, 300px);
     }
     
-    .about-content-left, .about-section {
+    .sub-section-left, .sub-section {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .about-content-right {
+    .sub-section-right {
         flex-direction: column-reverse;
     }
 
-    .about-section * {
+    .sub-section * {
         text-align: center;
     }
 
-    .about-section .vertical-line {
+    .sub-section .vertical-line {
         display: none;
     }
 
