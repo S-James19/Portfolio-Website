@@ -77,8 +77,8 @@
         
         <div class="section color2">
           <div class="content sub-section-padding content-large white-text information">
-            <div class="sub-section">
-              <div class="sub-section section-column section-right section-center right">
+            <div class="sub-section section-left-top">
+              <div class="sub-section section-column section-right-bottom section-center right">
                 <h2>Contact</h2>
                 <div class="contact-information">
                   <div class="contact-phone right">
@@ -97,29 +97,32 @@
                   <a href="#"><i class="fa-brands fa-github"></i></a>
                 </div>
               </div>
-              <div class="contact-form">
-                <div>
+              <form class="contact-form">
+                <div class="contact-form-input">
                   <label for="formName">Name</label>
                   <input type="text" id="formName" name="formName" placeholder="Name">
                 </div>
-                <div>
+                <div class="contact-form-input">
                   <label for="formSurname">Surname</label>
                   <input type="text" id="formSurname" name="formSurname" placeholder="Surname">
                 </div>
-                <div>
+                <div class="contact-form-input">
                   <label for="formEmail">Email</label>
-                  <input type="text" id="formEmail" name="formEmail" placeholder="Email">
+                  <input type="email" id="formEmail" name="formEmail" placeholder="Email">
                 </div>
-                <div>
+                <div class="contact-form-input">
                   <label for="formPhone">Phone</label>
-                  <input type="text" id="formPhone" name="formPhone" placeholder="Phone">
+                  <input type="tel" pattern="[0-9]{5}-[0-9]{6}"id="formPhone" name="formPhone" placeholder="Phone">
                 </div>
                 <div class="contact-form-message" for="formMessage">
                   <label for="">Message</label>
                   <input type="text" id="formMessage" name="formMessage" placeholder="Please enter message here">
                 </div>
+                <div class="contact-form-submit">
+                  <input class="btn-default btn-submit"type="submit">
+                </div>
 
-              </div>
+              </form>
             </div>
           </div>       
         </div>
