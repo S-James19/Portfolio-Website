@@ -1,10 +1,51 @@
-/* color scheme: https: //visme.co/blog/website-color-schemes/ 24. */
 
 /* Fonts */
 
+/* https: //fonts.google.com/specimen/Montserrat */
+
 @font-face {
-    font-family: 'Railway';
-    src: url('../fonts/Raleway/Raleway-VariableFont_wght.ttf');
+    font-family: 'Montserrat-extra-bold';
+    src: url('../fonts/Montserrat/static/Montserrat-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-bold';
+    src: url('../fonts/Montserrat/static/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-boldest';
+    src: url('../fonts/Montserrat/static/Montserrat-Black.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-semi-bold';
+    src: url('../fonts/Montserrat/static/Montserrat-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-medium';
+    src: url('../fonts/Montserrat/static/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-regular';
+    src: url('../fonts/Montserrat/static/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-light';
+    src: url('../fonts/Montserrat/static/Montserrat-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-extra-light';
+    src: url('../fonts/Montserrat/static/Montserrat-ExtraLight.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-lightest';
+    src: url('../fonts/Montserrat/static/Montserrat-Thin.ttf');
 }
 
 /*--------------- General ----------------*/
@@ -15,7 +56,7 @@ html {
     color: white;
 }
 body * {
-    font-family: 'Railway', Fallback, sans-serif;
+    font-family: 'Montserrat-regular', Fallback, sans-serif;
     text-decoration: none;
     list-style: none;
     letter-spacing: 1px;
@@ -30,23 +71,24 @@ body * {
 hr {
     margin: auto;
     width: 25%;
-    height: 3px;
+    height: 1.5px;
     border: none;
 }
 
 h1 {
     font-size: clamp(1.5rem, 10vmin, 6rem);
-    font-weight: 900;
+    font-family: 'Montserrat-extra-bold';
 }
 
 h2 {
     font-size: clamp(0.8rem, 4vmin, 2.4rem);
-    font-weight: 500;
+    font-family: 'Montserrat-regular';
+    letter-spacing: 5px;
 }
 
 p {
     font-size: clamp(1rem, 2.6vmin, 1.6rem);
-    font-weight: 100;
+    font-family: 'Montserrat-light';
 }
 
 .no-margin {
@@ -83,9 +125,10 @@ html::-webkit-scrollbar-track {
 .btn-default {
     background-color: transparent;
     border: 2px solid;
-    color: #1e1e1e;
-    padding: 10px 20px;
+    color: #f3effe;
+    padding: 20px 40px;
     align-self: center;
+    font-size: clamp(1rem, 2.6vmin, 1.6rem);
 }
 
 .btn-introduction {
@@ -99,52 +142,36 @@ html::-webkit-scrollbar-track {
 }
 
 .btn-default:hover {
-    background-color: rgba(30, 30, 30, 0.1);
-}
-
-.btn-about {
-    color: #f3effe;
-}
-
-.btn-submit {
-    color: #f3effe;
-    padding: 20px 40px;
-}
-
-.btn-about:hover {
-    background-color: rgba(243, 239, 254, 0.25);
-}
-
-.btn-submit:hover {
-    background-color: rgba(243, 239, 254, 0.25);
+    background-color: rgba(255,255,255, 0.1);
 }
 
 
 /*--------------- Colours ----------------*/
 
-.color1 { /* rgba(243, 239, 254, 1) */
-    background-color: #f3effe;
+.color1 {
+    background-color: rgba(251, 129, 34, 1);
 }
 
 .color1-text {
-    color: #f3effe;
+    color: rgba(251, 129, 34, 1);
 }
 
-.color2 { /* rgba(255, 71, 120, 1) */
-    background-color: #ff4778;
+.color2 {
+    background-color: rgba(29, 34, 40, 1);
 }
 
 .color2-text {
-    color: #ff4778;
+    color: rgba(29, 34, 40, 1);
 }
 
-.color3 { /* rgba(247, 162, 255, 1) */
-    background-color: #ff89a8;
+.color3 {
+    background-color: rgba(52, 58, 64, 1);
 }
 
 .color3-text {
-    background-color: #F7A2FF;
+    color: rgba(52, 58, 64, 1);
 }
+
 
 
 .black {
@@ -173,6 +200,10 @@ html::-webkit-scrollbar-track {
     text-align: right;
 }
 
+.extra-bold {
+    font-family: 'Montserrat-extra-bold';
+}
+
 /*--------------- Header ----------------*/
 
 .index {
@@ -196,20 +227,21 @@ html::-webkit-scrollbar-track {
     position: fixed;
     width: 100%;
     z-index: 3;
-    background-color: rgba(30, 30, 30, 1);
+    background-color: rgba(29, 34, 40, 1);
     font-size: 1.5rem;
     font-weight: 900;
 }
 
 #navbar * {
     color: white;
+    letter-spacing: 2.5px;
 }
 
 #navbar a:before {
     content: "";
     height: 1px;
     width: 0%;
-    background-color: #ff4778;
+    background-color: rgba(251, 129, 34, 1);
     display: block;
     margin: auto;
 }
@@ -286,15 +318,18 @@ html::-webkit-scrollbar-track {
     padding: 5% 0; 
 }
 
-.introduction h2:hover {
-    color: #ff7c9f;
+.introduction-content h2 {
+    margin: 2.5% 0;
+}
+
+.introduction-content h2:hover {
+    color: rgba(251, 129, 34, 1);
     transition: 0.25s;
 }
 
 .introduction-content {
     text-align: left;
     padding: 0px 50px;
-    color: #1e1e1e;
 }
 
 /*--------------- Page Content ----------------*/
@@ -305,7 +340,7 @@ html::-webkit-scrollbar-track {
 
 .content {
     width: 80%;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: auto;
     text-align: center;
 }
@@ -389,7 +424,7 @@ html::-webkit-scrollbar-track {
 /*--------------- Contact ----------------*/
 
 .contact-information p {
-    font-size: clamp(0.8rem, 2.6vmin, 1.6rem);
+    font-size: clamp(1rem, 2.6vmin, 1.6rem);
     word-break: break-all;
 }
 
@@ -413,22 +448,22 @@ html::-webkit-scrollbar-track {
 
 .contact-socials i {
     font-size: clamp(30px, 2.5vw, 40px);
-    color: white;
+    color: rgba(251, 129, 34, 1);
     margin: 7.5px 0;
 }
 
 .contact-socials i:hover {
-    color: #ff89a8;
+    color: rgba(251, 129, 34, 0.5);
 }
 
 /*--------------- Contact Form ----------------*/
 
 .required::after {
     content: "*";
-    color: #1e1e1e;
+    color: rgba(251, 129, 34, 1);
     position: absolute;
-    font-size: 60px;
-    top: -15px;
+    font-size: clamp(1.8rem, 2.6vmin, 2.4rem);
+    top: -5px;
 }
 
 .contact-form {
@@ -438,9 +473,9 @@ html::-webkit-scrollbar-track {
     grid-row-gap: clamp(15px, 5vw, 50px);
 }
 
-.contact-form-input input, .contact-form-message textarea {
+.contact-form-input input, .contact-form-message textarea, .contact-form-input select {
     padding: 10px;
-    font-size: clamp(0.5rem, 2.6vmin, 0.8rem);
+    font-size: clamp(0.8rem, 2.6vmin, 1.2rem);
 }
 
 
@@ -454,6 +489,7 @@ html::-webkit-scrollbar-track {
     display: block;
     margin-bottom: 10px;
     position: relative;
+    font-size: clamp(1.2rem, 2.6vmin, 1.5rem);
 }
 
 .contact-form-message {
@@ -466,24 +502,35 @@ html::-webkit-scrollbar-track {
 }
 
 .contact-form-message textarea {
-    width: 90%;
+    width: 75%;
     height: clamp(50px, 20vw, 200px);
     text-align: left;
     border: 1px solid black;
 }
 
+@media(max-width: 720px) {
+    .contact-form {
+        grid-template-columns: 1fr;
+        width: 85%;
+        grid-row-gap: clamp(15px, 10vw, 50px);
+    }
+
+    .contact-form * {
+        grid-column: 1;
+    }
+}
+
 /*--------------- Graph ----------------*/
 
 .graph-container {
-    width: 100%;
     flex: 0.8;
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 10% 80%;
 }
 
 .graph-content {
-    border-left: 4px solid #1e1e1e;
-    border-bottom: 4px solid #1e1e1e;
+    border-left: 4px solid white;
+    border-bottom: 4px solid white;
     padding-bottom: 5%;
 }
 
@@ -495,12 +542,7 @@ html::-webkit-scrollbar-track {
     justify-content: space-between;
     padding: 0 3%;
     margin: 3% 0;
-    background-color: #F7A2FF;
-}
-
-.graph-bar:hover {
-    background-color: #ee45fd;
-    transition: 0.3s ease-in-out;
+    background-color: rgba(251, 129, 34, 1);
 }
 
 #x-axis {
@@ -565,7 +607,7 @@ html::-webkit-scrollbar-track {
 }
 
 .footer .socials i:hover {
-    color: #ff4778;
+    color: rgba(251, 129, 34, 1);
 }
 
 /*--------------- Responsive ----------------*/
@@ -583,10 +625,14 @@ html::-webkit-scrollbar-track {
         display: none;
         overflow-y: auto;
         direction: rtl;
-        background-color: rgba(23, 37, 42, 0.9);
+        background-color: rgba(29, 34, 40, 1);
         font-size: clamp(0.75rem, 9vmin, 2.5rem);
         font-weight: 100;
         padding: 0 2% 0 0;
+    }
+
+    #navbar * {
+        letter-spacing: 0;
     }
 
     .navbar-options {
@@ -655,6 +701,10 @@ html::-webkit-scrollbar-track {
 @media(max-width: 720px) {
     .about-img {
         width: clamp(50px, 75vmin, 300px);
+    }
+
+    .about-title h2 {
+        margin: 0 0 15%;
     }
     
     .sub-section-left, .sub-section {

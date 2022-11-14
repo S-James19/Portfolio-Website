@@ -45,7 +45,7 @@
 }
 
 .card-information a:hover {
-    color: #ff4778;
+    color: rgba(251, 129, 34, 1);
 }
 
 .card-image {
