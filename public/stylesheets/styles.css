@@ -367,13 +367,10 @@ html::-webkit-scrollbar-track {
 }
 
 .vertical-line {
-    width: 1%;
-    height: 100%;
+    width: 0.25%;
     background-color: white;
-    float: right;
-    position: absolute;
-    right: 0;
-    top: 0;
+    align-self: stretch;
+    margin-left: 2%;
 }
 
 /*--------------- About Me ----------------*/
@@ -664,6 +661,7 @@ html::-webkit-scrollbar-track {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        flex: 1;
     }
 
     .sub-section-right {
