@@ -293,6 +293,7 @@ html::-webkit-scrollbar-track {
 
 .menu-bars {
     display: none;
+    z-index: 1;
 }
 
 /*--------------- Introduction ----------------*/
@@ -511,7 +512,7 @@ html::-webkit-scrollbar-track {
 @media(max-width: 720px) {
     .contact-form {
         grid-template-columns: 1fr;
-        width: 85%;
+        width: 100%;
         grid-row-gap: clamp(15px, 10vw, 50px);
     }
 

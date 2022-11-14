@@ -21,13 +21,16 @@
 }
 
 .card-container {
-    width: clamp(75px, 75vw, 337.5px);
-    height: clamp(100px, 100vw, 450px);
     background-color: #1e1e1e;
     border-radius: 3%;
     position: relative;
     margin: 2%;
     color: white;
+}
+
+.card-container-dimensions {
+    width: clamp(75px, 75vw, 337.5px);
+    height: clamp(100px, 100vw, 450px);
 }
 
 .card-container p, .card-container a {
@@ -91,7 +94,7 @@
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(75px, 337.5px));
-    grid-auto-rows: minmax(100px, 450px);
+    grid-gap: clamp(25px, 5vw, 50px);
     width: 100%;
     justify-content: center;
 }
