@@ -108,6 +108,7 @@ html::-webkit-scrollbar-track {
 
 .btn-submit {
     color: #f3effe;
+    padding: 20px 40px;
 }
 
 .btn-about:hover {
@@ -385,10 +386,15 @@ html::-webkit-scrollbar-track {
 
 
 .about-img {
-    width: clamp(50px, 40vmin, 400px);
+    width: clamp(25px, 40vmin, 400px);
 }
 
 /*--------------- Contact ----------------*/
+
+.contact-information p {
+    font-size: clamp(0.8rem, 2.6vmin, 1.6rem);
+    word-break: break-all;
+}
 
 .contact-information, .contact-socials {
     margin: 20px 0;
@@ -420,6 +426,14 @@ html::-webkit-scrollbar-track {
 
 /*--------------- Contact Form ----------------*/
 
+.required::after {
+    content: "*";
+    color: #1e1e1e;
+    position: absolute;
+    font-size: 60px;
+    top: -15px;
+}
+
 .contact-form {
     display: grid;
     width: 100%;
@@ -427,12 +441,13 @@ html::-webkit-scrollbar-track {
     grid-row-gap: clamp(15px, 5vw, 50px);
 }
 
-.contact-form input {
+.contact-form-input input, .contact-form-message textarea {
     padding: 10px;
-    text-align: center;
+    font-size: clamp(0.5rem, 2.6vmin, 0.8rem);
 }
 
-.contact-form-input input {
+
+.contact-form-input input, .contact-form-input select {
     width: 75%;
     height: clamp(20px, 10vw, 50px);
     border: 1px solid black;
@@ -441,17 +456,19 @@ html::-webkit-scrollbar-track {
 .contact-form label {
     display: block;
     margin-bottom: 10px;
+    position: relative;
 }
 
 .contact-form-message {
     grid-column: span 2;
+    overflow: auto;
 }
 
 .contact-form-submit {
     grid-column: span 2;
 }
 
-.contact-form-message input {
+.contact-form-message textarea {
     width: 90%;
     height: clamp(50px, 20vw, 200px);
     text-align: left;

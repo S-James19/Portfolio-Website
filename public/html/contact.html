@@ -74,7 +74,10 @@
 
     <section class="section color2">
       <div class="section-padding">
-        
+        <div class="content white-text information">
+          <p>For any queries, please contact me via the <strong>form</strong> below, or via the provided <strong>socials.</strong></p>
+        </div>
+
         <div class="section color2">
           <div class="content sub-section-padding content-large white-text information">
             <div class="sub-section section-left-top">
@@ -99,24 +102,37 @@
               </div>
               <form class="contact-form">
                 <div class="contact-form-input">
-                  <label for="formName">Name</label>
+                  <label class="required" for="formTitle">Title</label>
+                  <select id="formTitle" name="formTitle">
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Master">Master</option>
+                    <option value="Miss">Miss</option>
+                  </select>
+                </div>
+                <div class="contact-form-input">
+                  <label class="required" for="formName">Name</label>
                   <input type="text" id="formName" name="formName" placeholder="Name">
                 </div>
                 <div class="contact-form-input">
-                  <label for="formSurname">Surname</label>
+                  <label class="required" for="formSurname">Surname</label>
                   <input type="text" id="formSurname" name="formSurname" placeholder="Surname">
                 </div>
                 <div class="contact-form-input">
-                  <label for="formEmail">Email</label>
+                  <label class="required" for="formEmail">Email</label>
                   <input type="email" id="formEmail" name="formEmail" placeholder="Email">
                 </div>
                 <div class="contact-form-input">
                   <label for="formPhone">Phone</label>
                   <input type="tel" pattern="[0-9]{5}-[0-9]{6}"id="formPhone" name="formPhone" placeholder="Phone">
                 </div>
+                <div class="contact-form-input">
+                  <label for="formCompany">Company</label>
+                  <input type="text" id="formPhone" name="formPhone" placeholder="Phone">
+                </div>
                 <div class="contact-form-message" for="formMessage">
-                  <label for="">Message</label>
-                  <input type="text" id="formMessage" name="formMessage" placeholder="Please enter message here">
+                  <label class="required" for="">Message</label>
+                  <textarea id="formMessage" name="formMessage" placeholder="Please enter message here"></textarea>
                 </div>
                 <div class="contact-form-submit">
                   <input class="btn-default btn-submit"type="submit">
