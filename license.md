@@ -1,7 +1,7 @@
-**This project is licensed under the Attribution-NonCommercial-NoDerivs
-CC BY-NC-ND: https://creativecommons.org/licenses/by-nc-nd/4.0/**
+**This project is licensed under the [Attribution-NonCommercial-NoDerivs
+CC BY-NC-ND](https://creativecommons.org/licenses/by-nc-nd/4.0/)**
 
-**Template: https://github.com/Gibberlings3/GitHub-Templates/edit/master/License-Templates/CC-BY-NC-ND-4.0/LICENSE-CC-BY-NC-ND-4.0.md**
+**Template: https://github.com/Gibberlings3/GitHub-Templates**
 
 # Attribution-NonCommercial-NoDerivatives 4.0 International
 
