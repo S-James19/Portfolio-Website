@@ -3,7 +3,7 @@ CC BY-NC-ND](https://creativecommons.org/licenses/by-nc-nd/4.0/)**
 
 **Template: https://github.com/Gibberlings3/GitHub-Templates**
 
-**This is an education project completed at university**
+**This is an educational project completed at university**
 
 # Attribution-NonCommercial-NoDerivatives 4.0 International
 
