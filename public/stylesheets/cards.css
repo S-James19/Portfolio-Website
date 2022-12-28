@@ -76,7 +76,7 @@
 
 .card-information * {
     text-align: left;
-    padding: 0 !important;
+    margin: 5%;
 }
 
 .card-information {
@@ -90,7 +90,6 @@
     transition: 0.4s;
     overflow: auto;
     box-shadow: 2px black;
-    padding: 5%;
 }
 
 
