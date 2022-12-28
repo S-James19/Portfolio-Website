@@ -103,9 +103,11 @@
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(75px, 337.5px));
+    max-width: 1200px;
     grid-gap: clamp(25px, 5vw, 50px);
-    width: 100%;
     justify-content: center;
+    justify-items: center;
+    margin: auto;
 }
 
 /*--------------- Effects ----------------*/

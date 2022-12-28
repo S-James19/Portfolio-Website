@@ -394,11 +394,11 @@ html::-webkit-scrollbar-track {
     align-items: flex-start;
 }
 
-.information p {
+.information > p {
     padding: 5%;
 }
 
-.information h1 {
+.information > h1 {
     padding: 0 3% 3%;
 }
 
