@@ -40,3 +40,6 @@ INSERT INTO Projects(ProjectTitle, ProjectDesc, ProjectLink, ProjectImg, Project
 VALUES 
 ("Portfolio Website", "My portfolio website, developed over 3 months, using HTML, CSS, JavaScript and more technologies", 
 "exampleLink", "exampleLink", "2023-01-04", 1, 0);
+
+-- @block 
+SELECT * FROM PROJECTS;
