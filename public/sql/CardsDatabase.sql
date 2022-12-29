@@ -17,3 +17,8 @@ CREATE TABLE Projects(
     PRIMARY KEY (ProjectID),
     FOREIGN KEY (ProjectCategoryIDFK) REFERENCES Categories(CategoryID)
 );
+
+-- @block
+INSERT INTO Categories(CategoryName)
+VALUES
+    ("Web"),("Game"),("Mobile");
