@@ -2,13 +2,17 @@
 
 // import necessary packages for database connection
 const mysql = require('mysql2');
+const path = require('path');
+
+// access .env file storing username and password for mysql
+require('dotenv').config({path: path.resolve(__dirname, "../../private/.env")});
 
 // create connection with mysql
 const connection = mysql.createConnection(
     {
         host:'localhost',
-        user: "user",
-        password: "password"
+        user: process.env.USER_NAME,
+        password: process.env.USER_PASSWORD
     }
 );
 
