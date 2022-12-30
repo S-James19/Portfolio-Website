@@ -12,12 +12,16 @@ const connection = mysql.createConnection(
     {
         host:'localhost',
         user: process.env.USER_NAME,
-        password: process.env.USER_PASSWORD
+        password: process.env.USER_PASSWORD,
+        database: "cards"
     }
 );
 
 // connect to mysql server
 connection.connect(function(err) {
     if (err) throw err;
-    console.log("connected");
+    connection.query("SELECT * FROM Projects", function(err, result, fields) {
+        if (err) throw err;
+        console.log(result);
+    })
 });
