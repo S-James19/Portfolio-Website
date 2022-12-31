@@ -13,7 +13,7 @@ require('dotenv').config({path: path.resolve(__dirname, "../../../private/.env")
 const application = express();
 
 application.use(express.json());
-application.use('/api/chirps' , apiRouter);
+application.use('/testing' , apiRouter);
 
 application.listen(process.env.ACCESS_PORT, () => {
     console.log("server is running on port" + process.env.ACCESS_PORT);

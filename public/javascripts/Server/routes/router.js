@@ -14,7 +14,7 @@ router.get('/', async (req, res, nest) => {
         res.json(results);
     }
     catch(err) {
-        console.log(err);
+        console.log("this is working");
         res.sendStatus(500);
     }
 })
