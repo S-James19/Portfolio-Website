@@ -4,7 +4,7 @@
 const exp = require('constants');
 const express = require('express');
 const path = require('path');
-const apiRouter = require('./router.js');
+const apiRouter = require('./router');
 
 // access .env file storing username and password for mysql
 // https://stackoverflow.com/questions/69259896/set-environment-variables-outside-of-pages-dir-in-nextjs
@@ -15,7 +15,7 @@ const application = express();
 
 application.use(express.json());
 application.use(express.static(path.resolve(__dirname, "../public")));
-application.use(apiRouter);
+application.use(apiRouter.router);
 
 application.listen(process.env.ACCESS_PORT, () => {
     console.log("server is running on port" + process.env.ACCESS_PORT);

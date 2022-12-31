@@ -2,7 +2,7 @@
 
 // access required modules
 const express = require('express');
-const database = require('./database.js');
+const database = require('./database');
 const path = require('path');
 
 // create router
@@ -23,8 +23,8 @@ router.get('/all', async (req, res, nest) => {
     }
 })
 
-// get a random record
-router.get('/rand', async (req, res, nest) => {
+// return index.html
+router.get('/index.html', async (req, res, nest) => {
     try {
         let results = await database.rand();
         res.json(results);
@@ -46,4 +46,4 @@ router.get('/contact.html', (req, res) => {
 });
 
 //export module
-module.exports = router;
+module.exports = { router };

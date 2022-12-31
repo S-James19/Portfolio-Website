@@ -41,4 +41,4 @@ projectsDB.rand = () => {
     })
 }
 
-module.exports = projectsDB;
+module.exports = { projectsDB };
