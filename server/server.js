@@ -1,6 +1,7 @@
 // code from - https://www.youtube.com/watch?v=LVfH5FDOa3o
 
 // access modules
+const exp = require('constants');
 const express = require('express');
 const path = require('path');
 const apiRouter = require('./router.js');
@@ -13,6 +14,7 @@ require('dotenv').config({path: path.resolve(__dirname, "../private/.env")});
 const application = express();
 
 application.use(express.json());
+application.use(express.static(path.resolve(__dirname, "../public")));
 application.use(apiRouter);
 
 application.listen(process.env.ACCESS_PORT, () => {

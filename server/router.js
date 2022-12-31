@@ -3,9 +3,13 @@
 // access required modules
 const express = require('express');
 const database = require('./database.js');
+const path = require('path');
 
 // create router
 const router = express.Router();
+
+// public filepath for reuse
+const pub = path.resolve(__dirname, "../public/");
 
 // get all records
 router.get('/all', async (req, res, nest) => {
@@ -30,6 +34,10 @@ router.get('/rand', async (req, res, nest) => {
         res.sendStatus(500);
     }
 })
+
+router.get('/about.html', (req, res) => {
+    res.sendFile(path.join(pub, "html/about.html"));
+});
 
 //export module
 module.exports = router;
