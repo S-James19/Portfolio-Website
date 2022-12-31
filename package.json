@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "npx nodemon public/javascripts/Server/server.js -w Server "
+    "dev": "npx nodemon server/server.js -w Server "
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

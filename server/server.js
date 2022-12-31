@@ -3,11 +3,11 @@
 // access modules
 const express = require('express');
 const path = require('path');
-const apiRouter = require('./routes/router.js');
+const apiRouter = require('./router.js');
 
 // access .env file storing username and password for mysql
 // https://stackoverflow.com/questions/69259896/set-environment-variables-outside-of-pages-dir-in-nextjs
-require('dotenv').config({path: path.resolve(__dirname, "../../../private/.env")});
+require('dotenv').config({path: path.resolve(__dirname, "../private/.env")});
 
 // create application
 const application = express();

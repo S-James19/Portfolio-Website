@@ -5,7 +5,7 @@ const path = require('path');
 
 // access .env file storing username and password for mysql
 // https://stackoverflow.com/questions/69259896/set-environment-variables-outside-of-pages-dir-in-nextjs
-require('dotenv').config({path: path.resolve(__dirname, "../../../../private/.env")});
+require('dotenv').config({path: path.resolve(__dirname, "../private/.env")});
 
 //code from https://www.youtube.com/watch?v=LVfH5FDOa3o
 

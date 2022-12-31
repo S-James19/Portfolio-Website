@@ -2,7 +2,7 @@
 
 // access required modules
 const express = require('express');
-const database = require('../database/database.js');
+const database = require('./database.js');
 
 // create router
 const router = express.Router();
