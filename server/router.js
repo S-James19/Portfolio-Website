@@ -35,8 +35,14 @@ router.get('/rand', async (req, res, nest) => {
     }
 })
 
+//return about.html
 router.get('/about.html', (req, res) => {
     res.sendFile(path.join(pub, "html/about.html"));
+});
+
+//return contact.html
+router.get('/contact.html', (req, res) => {
+    res.sendFile(path.join(pub, "html/contact.html"));
 });
 
 //export module
