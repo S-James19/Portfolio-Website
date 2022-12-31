@@ -7,25 +7,28 @@ const path = require('path');
 // https://stackoverflow.com/questions/69259896/set-environment-variables-outside-of-pages-dir-in-nextjs
 require('dotenv').config({path: path.resolve(__dirname, "../../../../private/.env")});
 
-// https://www.w3schools.com/nodejs/nodejs_mysql.asp
+//code from https://www.youtube.com/watch?v=LVfH5FDOa3o
 
-// create connection with mysql
-const connection = mysql.createConnection(
-    {
-        host:'localhost',
-        user: process.env.USER_NAME,
-        password: process.env.USER_PASSWORD,
-        database: "cards"
-    }
-);
+// create connection pool for connecting to database
+const connectionPool = mysql.createPool({
+    connectionLimit: 10,
+    password: process.env.USER_PASSWORD,
+    user: process.env.USER_NAME,
+    database: 'cards',
+    host: 'localhost',
+    port: '3306'
+})
 
-// https://www.w3schools.com/nodejs/nodejs_mysql_select.asp
+let projectsDB = {};
 
-// connect to mysql server
-connection.connect(function(err) {
-    if (err) throw err;
-    connection.query("SELECT * FROM Projects", function(err, result, fields) {
-        if (err) throw err;
-        console.log(result);
+projectsDB.all = () => {
+    return new Promise((resolve, rejects) => {
+        connectionPool.query("SELECT * FROM PROJECTS", (err, res) => {
+            if(err) return rejects(err); // if error stop executing code
+            return resolve(res); // else return query results
+
+        });
     })
-});
+}
+
+module.exports = projectsDB;
