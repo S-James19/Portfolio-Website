@@ -31,4 +31,14 @@ projectsDB.all = () => {
     })
 }
 
+projectsDB.rand = () => {
+    return new Promise((resolve, rejects) => {
+        connectionPool.query("SELECT * FROM PROJECTS order by rand() limit 1", (err, res) => {
+            if(err) return rejects(err); // if error stop executing code
+            return resolve(res); // else return query results
+
+        });
+    })
+}
+
 module.exports = projectsDB;

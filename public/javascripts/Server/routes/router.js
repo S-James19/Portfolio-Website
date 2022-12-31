@@ -7,10 +7,22 @@ const database = require('../database/database.js');
 // create router
 const router = express.Router();
 
-// test for connection
-router.get('/', async (req, res, nest) => {
+// get all records
+router.get('/all', async (req, res, nest) => {
     try {
         let results = await database.all();
+        res.json(results);
+    }
+    catch(err) {
+        console.log("this is working");
+        res.sendStatus(500);
+    }
+})
+
+// get a random record
+router.get('/rand', async (req, res, nest) => {
+    try {
+        let results = await database.rand();
         res.json(results);
     }
     catch(err) {
