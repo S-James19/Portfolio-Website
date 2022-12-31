@@ -2,13 +2,21 @@
 
 // access required modules
 const express = require('express');
+const database = require('../database/database.js');
 
 // create router
 const router = express.Router();
 
 // test for connection
-router.get('/', (req, res, nest) => {
-    res.json({test: 'test'});
+router.get('/', async (req, res, nest) => {
+    try {
+        let results = await database.all();
+        res.json(results);
+    }
+    catch(err) {
+        console.log(err);
+        res.sendStatus(500);
+    }
 })
 
 //export module
