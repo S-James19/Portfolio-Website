@@ -493,6 +493,10 @@ html::-webkit-scrollbar-track {
     height: clamp(20px, 10vw, 50px);
 }
 
+.contact-form-input option {
+    color: #1e1e1e !important;
+}
+
 .contact-form label {
     display: block;
     margin-bottom: 10px;
