@@ -73,3 +73,18 @@ ADD COLUMN ProjectDate DATE AFTER ProjectDesc;
 UPDATE projects
 SET ProjectImg = "../../images/placeholder.jpg"
 WHERE ProjectID = 1 OR 2 OR 3;
+
+-- @block
+UPDATE projects
+SET ProjectImg = "../../images/website.png"
+WHERE ProjectID = 3;
+
+-- @block
+UPDATE projects
+SET ProjectImg = "../../images/insect.jpg"
+WHERE ProjectID = 2;
+
+-- @block
+UPDATE projects
+SET ProjectImg = "../../images/operation-extermination.png"
+WHERE ProjectID = 1;
