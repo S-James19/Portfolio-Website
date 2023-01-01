@@ -7,12 +7,17 @@ const path = require('path');
 const { json } = require('express');
 const fs = require('fs');
 const { stringify } = require('querystring');
+const mailer = require('nodemailer');
+
+// private .env file path
+require('dotenv').config({path: path.resolve(__dirname, "../private/.env")});
 
 // create router
 const router = express.Router();
 
 // public filepath for reuse
 const pub = path.resolve(__dirname, "../public/");
+
 
 // ---------- RETURNING WEBPAGES ---------- //
 
@@ -93,9 +98,36 @@ router.get('/operation-extermination.html', (req, res) => {
 
 // ---------- MAIL SERVER ----------- //
 
+//send email using data from contact form
+// code reference: https://www.youtube.com/watch?v=30VeUWxZjS8&t=277s
 router.post('/sendemail', (req, res) => {
-    res.send(JSON.parse(JSON.stringify(req.body)));
-})
+
+    const transporter = mailer.createTransport( {
+        service: 'gmail',
+        auth: {
+            user: process.env.USER_EMAIL,
+            pass: process.env.USER_EMAIL_PASSWORD
+        }
+    });
+
+    const mailOptions = {
+        from: req.body.Email,
+        to: process.env.USER_EMAIL,
+        subject: `Message from: ${req.body.Name}: ${req.body.Email}`,
+        text: req.body.Message
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if(error){
+            console.log(error);
+            res.send('error');
+        }
+        else {
+            console.log(req.body);
+            res.send('success');
+        }
+    });
+});
 
 
 //export module
