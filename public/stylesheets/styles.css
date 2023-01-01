@@ -129,10 +129,11 @@ html::-webkit-scrollbar-track {
     padding: 20px 40px;
     align-self: center;
     font-size: clamp(1rem, 2.6vmin, 1.6rem);
+    margin: 3.5%;
 }
 
 .btn-introduction {
-    margin-top: clamp(20px, 10%, 50px);
+    margin: 3% 0 !important;
 }
 
 .btn-card {
@@ -305,9 +306,9 @@ html::-webkit-scrollbar-track {
 
 .introduction {
     margin: auto;
-    width: 80%;
+    width: 90%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     position: absolute;
     left: 50%;
@@ -315,22 +316,19 @@ html::-webkit-scrollbar-track {
     transform: translate(-50%,50%);
 }
 
-.introduction h1 {
-    padding: 5% 0; 
+.introduction-content {
+    display: flex;
+    flex-direction: column;
 }
 
-.introduction-content h2 {
-    margin: 2.5% 0;
+.introduction-content * {
+    margin: 1.5% 0;
+    text-align: right;
 }
 
 .introduction-content h2:hover {
     color: rgba(251, 129, 34, 1);
     transition: 0.25s;
-}
-
-.introduction-content {
-    text-align: left;
-    padding: 0px 50px;
 }
 
 /*--------------- Page Content ----------------*/
@@ -395,7 +393,7 @@ html::-webkit-scrollbar-track {
 }
 
 .information > p {
-    padding: 5%;
+    padding: 3%;
 }
 
 .information > h1 {
@@ -671,10 +669,6 @@ html::-webkit-scrollbar-track {
         position: fixed;
         right: 0;
     }
-    
-    .introduction-content {
-        padding: 0 5%;
-    }
 
     .portrait {
         width: 65vmin;
@@ -747,7 +741,10 @@ html::-webkit-scrollbar-track {
     }
 
     .introduction-content {
-        padding-top: 5%;
+        margin-top: 5%;
+    }
+
+    .introduction-content * {
         text-align: center;
     }
 
