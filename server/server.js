@@ -15,7 +15,12 @@ const application = express();
 
 application.use(express.json());
 application.use(express.static(path.resolve(__dirname, "../public")));
-application.use(apiRouter.router);
+application.use(apiRouter);
+
+//set up view engine for rendering dynamic html content
+application.use(express.urlencoded({ extended: false}));
+application.set("view engine", "ejs");
+application.set("views", path.resolve(__dirname, "../public/html/views"));
 
 application.listen(process.env.ACCESS_PORT, () => {
     console.log("server is running on port" + process.env.ACCESS_PORT);

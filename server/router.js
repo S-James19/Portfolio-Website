@@ -4,6 +4,9 @@
 const express = require('express');
 const database = require('./database');
 const path = require('path');
+const { json } = require('express');
+const fs = require('fs');
+const { stringify } = require('querystring');
 
 // create router
 const router = express.Router();
@@ -12,22 +15,24 @@ const router = express.Router();
 const pub = path.resolve(__dirname, "../public/");
 
 // get all records
-router.get('/all', async (req, res, nest) => {
+router.get('/index.html', async (req, res, nest) => {
     try {
         let results = await database.all();
-        res.json(results);
+        res.send(results);
     }
     catch(err) {
-        console.log("this is working");
+        console.log(err);
         res.sendStatus(500);
     }
 })
 
-// return index.html
-router.get('/index.html', async (req, res, nest) => {
+// return projects.html
+router.get('/projects.html', async (req, res, nest) => {
     try {
-        let results = await database.rand();
-        res.json(results);
+        let results = await database.all(); // get all records in database
+        let resultsJSON = JSON.parse(JSON.stringify(results));
+        res.render("projects", {data: resultsJSON});
+        
     }
     catch(err) {
         console.log("this is working");
@@ -45,5 +50,6 @@ router.get('/contact.html', (req, res) => {
     res.sendFile(path.join(pub, "html/contact.html"));
 });
 
+
 //export module
-module.exports = { router };
+module.exports = router;
