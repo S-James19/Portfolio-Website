@@ -476,16 +476,21 @@ html::-webkit-scrollbar-track {
     grid-row-gap: clamp(15px, 5vw, 50px);
 }
 
+.contact-form * {
+    background-color: transparent;
+    color: white;
+}
+
 .contact-form-input input, .contact-form-message textarea, .contact-form-input select {
     padding: 10px;
     font-size: clamp(0.8rem, 2.6vmin, 1.2rem);
+    border: 2px solid white;
 }
 
 
 .contact-form-input input, .contact-form-input select {
     width: 75%;
     height: clamp(20px, 10vw, 50px);
-    border: 1px solid black;
 }
 
 .contact-form label {
@@ -508,7 +513,6 @@ html::-webkit-scrollbar-track {
     width: 75%;
     height: clamp(50px, 20vw, 200px);
     text-align: left;
-    border: 1px solid black;
 }
 
 @media(max-width: 720px) {

@@ -16,7 +16,6 @@
       src="../javascripts/navbar.js"
       defer
     ></script>
-    <script type="text/javascript" src="../javascripts/cards.js" defer></script>
 
     <link rel="stylesheet" href="../stylesheets/styles.css" />
     <link rel="stylesheet" href="../stylesheets/cards.css" />
@@ -99,37 +98,31 @@
                   </select>
                 </div>
                 <div class="contact-form-input">
-                  <label class="required" for="formName">Name</label>
-                  <input type="text" id="formName" name="formName" placeholder="Name">
-                </div>
-                <div class="contact-form-input">
-                  <label class="required" for="formSurname">Surname</label>
-                  <input type="text" id="formSurname" name="formSurname" placeholder="Surname">
+                  <label class="required" for="formName">Full Name</label>
+                  <input type="text" id="formName" placeholder="Name">
                 </div>
                 <div class="contact-form-input">
                   <label class="required" for="formEmail">Email</label>
-                  <input type="email" id="formEmail" name="formEmail" placeholder="Email">
+                  <input type="email" id="formEmail" placeholder="Email">
                 </div>
                 <div class="contact-form-input">
-                  <label for="formPhone">Phone</label>
-                  <input type="tel" pattern="[0-9]{5}-[0-9]{6}"id="formPhone" name="formPhone" placeholder="Phone">
-                </div>
-                <div class="contact-form-input">
-                  <label for="formCompany">Company</label>
-                  <input type="text" id="formPhone" name="formPhone" placeholder="Phone">
+                  <label class="required" for="formSubject">Subject</label>
+                  <input type="text" id="formSubject" placeholder="Subject">
                 </div>
                 <div class="contact-form-message" for="formMessage">
                   <label class="required" for="">Message</label>
-                  <textarea id="formMessage" name="formMessage" placeholder="Please enter message here"></textarea>
+                  <textarea id="formMessage" placeholder="Please enter message here"></textarea>
                 </div>
                 <div class="contact-form-submit">
-                  <input class="btn-default btn-submit"type="submit">
+                  <input class="btn-default btn-submit" type="submit" value="Send Message">
                 </div>
 
               </form>
             </div>
           </div>       
         </div>
+
+        <script src="../javascripts/sendform.js"></script>
 
       </div>
     </section>
