@@ -21,19 +21,20 @@ const connectionPool = mysql.createPool({
 
 let projectsDB = {};
 
+// query: get all records from projects database
 projectsDB.all = () => {
     return new Promise((resolve, rejects) => {
-        connectionPool.query("SELECT * FROM PROJECTS", (err, res) => {
+        connectionPool.query("SELECT * FROM PROJECTS", (err, res) => { // create connection, ask query
             if(err) return rejects(err); // if error stop executing code
             return resolve(res); // else return query results
-
         });
     })
 }
 
+// query: get three random records from projects database
 projectsDB.random_three = () => {
     return new Promise((resolve, rejects) => {
-        connectionPool.query("SELECT * FROM PROJECTS order by rand() limit 3", (err, res) => {
+        connectionPool.query("SELECT * FROM PROJECTS order by rand() limit 3", (err, res) => { // create connection, ask query
             if(err) return rejects(err); // if error stop executing code
             return resolve(res); // else return query results
 
@@ -41,14 +42,16 @@ projectsDB.random_three = () => {
     })
 }
 
+//query: append views field in projects database, how many views projects pages have had from users
 projectsDB.updateViewers = (id) => {
     return new Promise((resolve, rejects) => {
-        let viewersQuery = `UPDATE projects SET ProjectViews = ProjectViews + 1 WHERE ProjectID = ${id}`;
-        connectionPool.query(viewersQuery, (err, res) => {
+        let viewersQuery = `UPDATE projects SET ProjectViews = ProjectViews + 1 WHERE ProjectID = ${id}`; // the query to ask
+        connectionPool.query(viewersQuery, (err, res) => { // create connection, ask query
             if(err) return rejects(err); // if error stop executing code
             return
         });
     })
 }
 
+//export for use in other scripts
 module.exports = projectsDB;

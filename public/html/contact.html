@@ -80,16 +80,18 @@
         <div class="section color2">
           <div class="content sub-section-padding content-large white-text information">
             <div class="sub-section section-left-top">
-                <div class="contact-socials">
-                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                  <a href="#"><i class="fa-brands fa-discord"></i></a>
-                  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                  <a href="#"><i class="fa-brands fa-github"></i></a>
+                <div class="contact-socials"> <!-- Social Icons on side -->
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a> <!-- Instagram -->
+                  <a href="#"><i class="fa-brands fa-discord"></i></a> <!-- Discord -->
+                  <a href="#"><i class="fa-brands fa-linkedin"></i></a> <!-- LinkedIn -->
+                  <a href="#"><i class="fa-brands fa-github"></i></a> <!-- GitHub -->
                 </div>
               <div class="vertical-line"></div>
+
+              <!------------------ CONTACT FORM TO FILL IN  ---------------------->
               <form class="contact-form" method="POST" action="/sendemail">
                 <div class="contact-form-input">
-                  <label class="required" for="formTitle">Title</label>
+                  <label class="required" for="formTitle">Title</label> <!-- Title -->
                   <select id="formTitle" name="Title">
                     <option value="Mr">Mr</option>
                     <option value="Mrs">Mrs</option>
@@ -98,29 +100,28 @@
                   </select>
                 </div>
                 <div class="contact-form-input">
-                  <label class="required" for="formName">Full Name</label>
+                  <label class="required" for="formName">Full Name</label> <!-- Name -->
                   <input type="text" id="formName" name="Name" placeholder="Name">
                 </div>
                 <div class="contact-form-input">
-                  <label class="required" for="formEmail">Email</label>
+                  <label class="required" for="formEmail">Email</label> <!-- Email -->
                   <input type="email" id="formEmail" name="Email" placeholder="Email">
                 </div>
                 <div class="contact-form-input">
-                  <label class="required" for="formSubject">Subject</label>
+                  <label class="required" for="formSubject">Subject</label> <!-- Subject -->
                   <input type="text" id="formSubject" name="Subject" placeholder="Subject">
                 </div>
                 <div class="contact-form-message" for="formMessage">
-                  <label class="required" for="">Message</label>
+                  <label class="required" for="">Message</label> <!-- Message -->
                   <textarea id="formMessage" placeholder="Please enter message here" name="Message"></textarea>
                 </div>
-                <div class="contact-form-submit">
+                <div class="contact-form-submit"> <!-- Submit button -->
                   <input class="btn-default btn-submit" type="submit" value="submit">
                 </div>
               </form>
             </div>
           </div>       
         </div>
-
       </div>
     </section>
 

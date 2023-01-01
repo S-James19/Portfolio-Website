@@ -24,11 +24,11 @@ const pub = path.resolve(__dirname, "../public/");
 // return index.html
 router.get('/index.html', async (req, res, nest) => {
     try {
-        let results = await database.random_three();
-        let resultsJSON = JSON.parse(JSON.stringify(results));
-        res.render("index", {data: resultsJSON});
+        let results = await database.random_three(); // get database records
+        let resultsJSON = JSON.parse(JSON.stringify(results)); // parse to JSON format
+        res.render("index", {data: resultsJSON}); // render dynamic content and return to user
     }
-    catch(err) {
+    catch(err) { // page error
         console.log(err);
         res.sendStatus(500);
     }
@@ -37,9 +37,9 @@ router.get('/index.html', async (req, res, nest) => {
 // return projects.html
 router.get('/projects.html', async (req, res, nest) => {
     try {
-        let results = await database.all(); // get all records in database
-        let resultsJSON = JSON.parse(JSON.stringify(results));
-        res.render("projects", {data: resultsJSON});
+        let results = await database.all(); // get database records
+        let resultsJSON = JSON.parse(JSON.stringify(results)); // parse to JSON format
+        res.render("projects", {data: resultsJSON}); // render dynamic content and return to user
         
     }
     catch(err) {
@@ -99,9 +99,11 @@ router.get('/operation-extermination.html', (req, res) => {
 // ---------- MAIL SERVER ----------- //
 
 //send email using data from contact form
+
 // code reference: https://www.youtube.com/watch?v=30VeUWxZjS8&t=277s
 router.post('/sendemail', (req, res) => {
 
+    //setup user account to send the emails from
     const transporter = mailer.createTransport( {
         service: 'gmail',
         auth: {
@@ -110,6 +112,7 @@ router.post('/sendemail', (req, res) => {
         }
     });
 
+    //setup email content to send to user
     const mailOptions = {
         from: req.body.Email,
         to: process.env.USER_EMAIL,
@@ -117,18 +120,18 @@ router.post('/sendemail', (req, res) => {
         text: req.body.Message
     };
 
+    // send email from logged in acconut to specified user
     transporter.sendMail(mailOptions, (error, info) => {
-        if(error){
+        if(error){ // error
             console.log(error);
             res.send('error');
         }
-        else {
+        else { // successfully sent 
             console.log(req.body);
-            res.send('success');
+            res.sendFile(path.join(pub, "html/contact.html")); // return page
         }
     });
 });
-
 
 //export module
 module.exports = router;

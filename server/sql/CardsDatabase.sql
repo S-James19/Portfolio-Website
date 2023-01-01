@@ -1,9 +1,10 @@
-CREATE TABLE Categories(
+-- create table to store project categories
+CREATE TABLE Categories( 
     CategoryID INT NOT NULL AUTO_INCREMENT,
     CategoryName VARCHAR(255),
     PRIMARY KEY (CategoryID)
 );
-
+-- create table to store individual projects
 -- @block
 CREATE TABLE Projects(
     ProjectID INT NOT NULL AUTO_INCREMENT,
@@ -18,48 +19,42 @@ CREATE TABLE Projects(
     FOREIGN KEY (ProjectCategoryIDFK) REFERENCES Categories(CategoryID)
 );
 
+-- add fields to categories
 -- @block
 INSERT INTO Categories(CategoryName)
 VALUES
     ("Web"),("Game"),("Mobile");
 
+-- add Operation Extermination to projects database
 -- @block 
 INSERT INTO Projects(ProjectTitle, ProjectDesc, ProjectLink, ProjectImg, ProjectDate, ProjectCategoryIDFK, ProjectViews)
 VALUES 
 ("Operation Extermination", "Operation Extermination is a first-person shooter, local-coop game that I developed in a team of 8 members over 6 months, using Unity and C# technologies.", 
 "exampleLink", "exampleLink", "2022-05-10", 2, 0);
 
+-- add Insect Infinite Runner to projects database
 -- @block 
 INSERT INTO Projects(ProjectTitle, ProjectDesc, ProjectLink, ProjectImg, ProjectDate, ProjectCategoryIDFK, ProjectViews)
 VALUES 
 ("Insect Infinite Runner", "Insect Infinite Runner is a first person infinite runner game solo project developed over 5 months, using Unity, C#, C++ and Arduino technologies.", 
 "exampleLink", "exampleLink", "2022-05-10", 2, 0);
 
+-- add Portfolio website to projects database
 -- @block 
 INSERT INTO Projects(ProjectTitle, ProjectDesc, ProjectLink, ProjectImg, ProjectDate, ProjectCategoryIDFK, ProjectViews)
 VALUES 
 ("Portfolio Website", "My portfolio website, developed over 3 months, using HTML, CSS, JavaScript and more technologies", 
 "exampleLink", "exampleLink", "2023-01-04", 1, 0);
 
--- @block
-INSERT INTO Projects(ProjectTitle, ProjectDesc, ProjectLink, ProjectImg, ProjectDate, ProjectCategoryIDFK, ProjectViews)
-VALUES 
-("Test", "My portfolio website, developed over 3 months, using HTML, CSS, JavaScript and more technologies", 
-"exampleLink", "exampleLink", "2023-01-04", 3, 0);
-
--- @block
-DELETE FROM Projects WHERE ProjectID = 4;
-
+-- select all fields in projects database
 -- @block 
 SELECT * FROM PROJECTS;
 
+-- select all fields in categories database
 -- @block 
 SELECT * FROM categories;
 
--- @block 
-ALTER TABLE Projects
-MODIFY COLUMN ProjectDate DATE;
-
+-- Update date fields in projects database
 -- @block
 UPDATE projects
 SET ProjectDate = "10 May 22"
@@ -73,13 +68,7 @@ UPDATE projects
 SET ProjectDate = "4 Jan 23"
 WHERE ProjectID = 3;
 
--- @block
-ALTER TABLE projects
-DROP COLUMN ProjectDate;
-
--- @block
-ALTER TABLE projects
-ADD COLUMN ProjectDate DATE AFTER ProjectDesc;
+-- add image links to projects database
 
 -- @block
 UPDATE projects
@@ -101,6 +90,7 @@ UPDATE projects
 SET ProjectImg = "../../images/operation-extermination.png"
 WHERE ProjectID = 1;
 
+-- add project page links to projects database
 -- @block
 UPDATE projects
 SET ProjectLink = "operation-extermination.html"

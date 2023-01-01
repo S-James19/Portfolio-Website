@@ -1,27 +1,28 @@
 <div class="cards-grid">
 
-  <% if(data) { %>
-    <% for(let project of data) { %>
+  <% if(data) { %> <!-- if there is project data to append with -->
+    <% for(let project of data) { %> <!-- foreach project that there is -->
 
+      <!-- Create a container for card, and fill in info from projects database-->
       <div class="card-container card-container-dimensions">
         <div class="card-image-container">
-          <img class="card-image" src="<%=project.ProjectImg%>" alt="image">
+          <img class="card-image" src="<%=project.ProjectImg%>" alt="image"> <!-- card image -->
         </div>
         <div class="card-label">
           <div class="card-project-title left">
-            <h3><%=project.ProjectTitle%></h3>
+            <h3><%=project.ProjectTitle%></h3> <!-- project title -->
           </div>
           <div class="card-project-further-info">
-              <p class="left"><strong>Category</strong><br><%=project.ProjectCategoryIDFK%> </p>
-              <p class="right"><strong>Date</strong><br><%=project.ProjectDate%></p>
+              <p class="left"><strong>Category</strong><br><%=project.ProjectCategoryIDFK%> </p> <!-- project category -->
+              <p class="right"><strong>Date</strong><br><%=project.ProjectDate%></p> <!-- project date -->
           </div>
         </div>
         <div class="card-information">
-          <h3><%=project.ProjectTitle%></h3>
+          <h3><%=project.ProjectTitle%></h3> <!-- project title -->
           <p>
-            <%=project.ProjectDesc%>
+            <%=project.ProjectDesc%> <!-- project description -->
           </p>
-          <a href="<%=project.ProjectLink%>">Read More ></a>
+          <a href="<%=project.ProjectLink%>">Read More ></a> <!-- project link -->
         </div>
       </div>
 
