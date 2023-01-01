@@ -88,19 +88,25 @@
                 </div>
               <div class="vertical-line"></div>
               <form class="contact-form" method="POST" action="/sendemail">
-                <label class="required" for="fname">Name</label>
-                <input type="text" id="fname" name="Name" placeholder="Name">
-
-                <label class="required" for="femail">Email</label>
-                <input type="email" id="femail" name="Email" placeholder="Email">
-
-                <label class="required" for="fsubject">Subject</label>
-                <input type="text" id="fsubject" name="Subject" Placeholder="Subject">
-
-                <label class="required" for="fmsg">Message</label>
-                <textarea id="fmsg" name="Message" placeholder="Please enter message here"></textarea>
-
-                <input class="btn-default btn-submit" type="submit" id="submitbutton" value="Submit">
+                <div class="contact-form-input">
+                  <label class="required" for="formName">Full Name</label>
+                  <input type="text" id="formName" name="Name" placeholder="Name">
+                </div>
+                <div class="contact-form-input">
+                  <label class="required" for="formEmail">Email</label>
+                  <input type="email" id="formEmail" name="Email" placeholder="Email">
+                </div>
+                <div class="contact-form-input">
+                  <label class="required" for="formSubject">Subject</label>
+                  <input type="text" id="formSubject" name="Subject" placeholder="Subject">
+                </div>
+                <div class="contact-form-message" for="formMessage">
+                  <label class="required" for="">Message</label>
+                  <textarea id="formMessage" placeholder="Please enter message here" name="Message"></textarea>
+                </div>
+                <div class="contact-form-submit">
+                  <input class="btn-default btn-submit" type="submit" value="submit">
+                </div>
               </form>
             </div>
           </div>       
