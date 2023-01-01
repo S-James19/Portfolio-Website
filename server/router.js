@@ -14,6 +14,8 @@ const router = express.Router();
 // public filepath for reuse
 const pub = path.resolve(__dirname, "../public/");
 
+// ---------- RETURNING WEBPAGES ---------- //
+
 // return index.html
 router.get('/index.html', async (req, res, nest) => {
     try {
@@ -88,6 +90,9 @@ router.get('/operation-extermination.html', (req, res) => {
         res.sendStatus(500);
     }
 });
+
+// ---------- MAIL SERVER ----------- //
+
 
 
 //export module

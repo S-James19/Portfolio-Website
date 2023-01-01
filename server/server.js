@@ -5,6 +5,8 @@ const exp = require('constants');
 const express = require('express');
 const path = require('path');
 const apiRouter = require('./router');
+const mailer = require('nodemailer');
+const parser = require('body-parser');
 
 // access .env file storing username and password for mysql
 // https://stackoverflow.com/questions/69259896/set-environment-variables-outside-of-pages-dir-in-nextjs
@@ -18,6 +20,8 @@ application.use(express.static(path.resolve(__dirname, "../public")));
 application.use(apiRouter);
 
 //set up view engine for rendering dynamic html content
+application.use(parser.urlencoded({extended: true}));
+application.use(express.json());
 application.use(express.urlencoded({ extended: false}));
 application.set("view engine", "ejs");
 application.set("views", path.resolve(__dirname, "../public/html/views"));
