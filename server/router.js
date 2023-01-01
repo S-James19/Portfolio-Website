@@ -65,14 +65,28 @@ router.get('/portfolio.html', (req, res) => {
     }
 });
 
-// return insect runner
+// return portfolio 
 router.get('/infinite-insect-runner.html', (req, res) => {
-    res.sendFile(path.join(pub, "html/projects/infinite-insect-runner.html"));
+    try {
+        database.updateViewers(2); // get all records in database
+        res.sendFile(path.join(pub, "html/projects/infinite-insect-runner.html"));
+    }
+    catch(err) {
+        console.log(err);
+        res.sendStatus(500);
+    }
 });
 
 // return operation extermination
 router.get('/operation-extermination.html', (req, res) => {
-    res.sendFile(path.join(pub, "html/projects/operation-extermination.html"));
+    try {
+        database.updateViewers(1); // get all records in database
+        res.sendFile(path.join(pub, "html/projects/operation-extermination.html"));
+    }
+    catch(err) {
+        console.log(err);
+        res.sendStatus(500);
+    }
 });
 
 

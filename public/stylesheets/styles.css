@@ -431,7 +431,7 @@ html::-webkit-scrollbar-track {
     word-break: break-all;
 }
 
-.contact-information, .contact-socials {
+.contact-information {
     margin: 20px 0;
 }
 
@@ -446,13 +446,13 @@ html::-webkit-scrollbar-track {
 .contact-socials {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-self: center;
 }
 
 .contact-socials i {
-    font-size: clamp(30px, 2.5vw, 40px);
+    font-size: clamp(25px, 5vw, 100px);
     color: rgba(251, 129, 34, 1);
-    margin: 7.5px 0;
+    margin: 15% 0;
 }
 
 .contact-socials i:hover {
