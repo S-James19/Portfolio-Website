@@ -41,6 +41,15 @@ VALUES
 ("Portfolio Website", "My portfolio website, developed over 3 months, using HTML, CSS, JavaScript and more technologies", 
 "exampleLink", "exampleLink", "2023-01-04", 1, 0);
 
+-- @block
+INSERT INTO Projects(ProjectTitle, ProjectDesc, ProjectLink, ProjectImg, ProjectDate, ProjectCategoryIDFK, ProjectViews)
+VALUES 
+("Test", "My portfolio website, developed over 3 months, using HTML, CSS, JavaScript and more technologies", 
+"exampleLink", "exampleLink", "2023-01-04", 3, 0);
+
+-- @block
+DELETE FROM Projects WHERE ProjectID = 4;
+
 -- @block 
 SELECT * FROM PROJECTS;
 
@@ -88,3 +97,4 @@ WHERE ProjectID = 2;
 UPDATE projects
 SET ProjectImg = "../../images/operation-extermination.png"
 WHERE ProjectID = 1;
+
