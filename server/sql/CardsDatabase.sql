@@ -43,3 +43,33 @@ VALUES
 
 -- @block 
 SELECT * FROM PROJECTS;
+
+-- @block 
+ALTER TABLE Projects
+MODIFY COLUMN ProjectDate DATE;
+
+-- @block
+UPDATE projects
+SET ProjectDate = "2022-05-10"
+WHERE ProjectID = 1;
+-- @block
+UPDATE projects
+SET ProjectDate = "2022-05-10"
+WHERE ProjectID = 2;
+-- @block
+UPDATE projects
+SET ProjectDate = "2023-01-04"
+WHERE ProjectID = 3;
+
+-- @block
+ALTER TABLE projects
+DROP COLUMN ProjectDate;
+
+-- @block
+ALTER TABLE projects
+ADD COLUMN ProjectDate DATE AFTER ProjectDesc;
+
+-- @block
+UPDATE projects
+SET ProjectImg = "../../images/placeholder.jpg"
+WHERE ProjectID = 1 OR 2 OR 3;

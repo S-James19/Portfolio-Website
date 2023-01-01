@@ -1,16 +1,5 @@
 /*--------------- Individual Cards ----------------*/
 
-#card1 {
-    background-image: url(../images/placeholder.jpg);
-}
-
-#card2 {
-    background-image: url(../images/header.jpg);
-}
-
-#card3 {
-    background-image: url(../images/placeholder.jpg);
-}
 
 /*--------------- Cards ----------------*/
 /*--- Container ---*/
@@ -33,7 +22,7 @@
 }
 
 .card-container h3 {
-    font-size: clamp(1.5rem, 2.6vw, 2rem);
+    font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 /*--- Front of card ---*/
