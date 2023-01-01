@@ -54,6 +54,9 @@ DELETE FROM Projects WHERE ProjectID = 4;
 SELECT * FROM PROJECTS;
 
 -- @block 
+SELECT * FROM categories;
+
+-- @block 
 ALTER TABLE Projects
 MODIFY COLUMN ProjectDate DATE;
 
@@ -97,4 +100,17 @@ WHERE ProjectID = 2;
 UPDATE projects
 SET ProjectImg = "../../images/operation-extermination.png"
 WHERE ProjectID = 1;
+
+-- @block
+UPDATE projects
+SET ProjectLink = "operation-extermination.html"
+WHERE ProjectID = 1;
+
+UPDATE projects
+SET ProjectLink = "infinite-insect-runner.html"
+WHERE ProjectID = 2;
+
+UPDATE projects
+SET ProjectLink = "portfolio.html"
+WHERE ProjectID = 3;
 

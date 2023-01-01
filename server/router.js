@@ -51,6 +51,23 @@ router.get('/contact.html', (req, res) => {
     res.sendFile(path.join(pub, "html/contact.html"));
 });
 
+// ---------- INDIVIDUAL PROJECTS ---------- //
+
+// return portfolio 
+router.get('/portfolio.html', (req, res) => {
+    res.sendFile(path.join(pub, "html/projects/portfolio.html"));
+});
+
+// return insect runner
+router.get('/infinite-insect-runner.html', (req, res) => {
+    res.sendFile(path.join(pub, "html/projects/infinite-insect-runner.html"));
+});
+
+// return operation extermination
+router.get('/operation-extermination.html', (req, res) => {
+    res.sendFile(path.join(pub, "html/projects/operation-extermination.html"));
+});
+
 
 //export module
 module.exports = router;

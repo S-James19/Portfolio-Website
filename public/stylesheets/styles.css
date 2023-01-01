@@ -331,6 +331,10 @@ html::-webkit-scrollbar-track {
     transition: 0.25s;
 }
 
+.introduction-heading {
+    text-align: center !important;
+}
+
 /*--------------- Page Content ----------------*/
 
 .section {
