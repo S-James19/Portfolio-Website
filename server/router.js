@@ -113,7 +113,7 @@ router.post('/sendemail', (req, res) => {
     const mailOptions = {
         from: req.body.Email,
         to: process.env.USER_EMAIL,
-        subject: `Message from: ${req.body.Name}: ${req.body.Email}`,
+        subject: `Message from: ${req.body.Title}: ${req.body.Name}, ${req.body.Email}`,
         text: req.body.Message
     };
 

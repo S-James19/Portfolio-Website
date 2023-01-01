@@ -89,6 +89,15 @@
               <div class="vertical-line"></div>
               <form class="contact-form" method="POST" action="/sendemail">
                 <div class="contact-form-input">
+                  <label class="required" for="formTitle">Title</label>
+                  <select id="formTitle" name="Title">
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Master">Master</option>
+                    <option value="Miss">Miss</option>
+                  </select>
+                </div>
+                <div class="contact-form-input">
                   <label class="required" for="formName">Full Name</label>
                   <input type="text" id="formName" name="Name" placeholder="Name">
                 </div>
