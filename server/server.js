@@ -16,13 +16,15 @@ require('dotenv').config({path: path.resolve(__dirname, "../private/.env")});
 const application = express();
 
 application.use(express.json());
+application.use(express.urlencoded({ extended: true}));
+
+application.use(parser.urlencoded({extended: true}));
+application.use(parser.json());
+
 application.use(express.static(path.resolve(__dirname, "../public")));
 application.use(apiRouter);
 
 //set up view engine for rendering dynamic html content
-application.use(parser.urlencoded({extended: true}));
-application.use(express.json());
-application.use(express.urlencoded({ extended: false}));
 application.set("view engine", "ejs");
 application.set("views", path.resolve(__dirname, "../public/html/views"));
 

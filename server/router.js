@@ -93,6 +93,9 @@ router.get('/operation-extermination.html', (req, res) => {
 
 // ---------- MAIL SERVER ----------- //
 
+router.post('/sendemail', (req, res) => {
+    res.send(JSON.parse(JSON.stringify(req.body)));
+})
 
 
 //export module
