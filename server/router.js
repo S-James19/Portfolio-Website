@@ -36,7 +36,7 @@ router.get('/projects.html', async (req, res, nest) => {
         
     }
     catch(err) {
-        console.log("this is working");
+        console.log(err);
         res.sendStatus(500);
     }
 })
@@ -55,7 +55,14 @@ router.get('/contact.html', (req, res) => {
 
 // return portfolio 
 router.get('/portfolio.html', (req, res) => {
-    res.sendFile(path.join(pub, "html/projects/portfolio.html"));
+    try {
+        database.updateViewers(3); // get all records in database
+        res.sendFile(path.join(pub, "html/projects/portfolio.html"));
+    }
+    catch(err) {
+        console.log(err);
+        res.sendStatus(500);
+    }
 });
 
 // return insect runner

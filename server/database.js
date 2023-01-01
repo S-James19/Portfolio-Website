@@ -41,4 +41,14 @@ projectsDB.random_three = () => {
     })
 }
 
+projectsDB.updateViewers = (id) => {
+    return new Promise((resolve, rejects) => {
+        let viewersQuery = `UPDATE projects SET ProjectViews = ProjectViews + 1 WHERE ProjectID = ${id}`;
+        connectionPool.query(viewersQuery, (err, res) => {
+            if(err) return rejects(err); // if error stop executing code
+            return
+        });
+    })
+}
+
 module.exports = projectsDB;
