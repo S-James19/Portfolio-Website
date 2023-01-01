@@ -50,15 +50,15 @@ MODIFY COLUMN ProjectDate DATE;
 
 -- @block
 UPDATE projects
-SET ProjectDate = "2022-05-10"
+SET ProjectDate = "10 May 22"
 WHERE ProjectID = 1;
 -- @block
 UPDATE projects
-SET ProjectDate = "2022-05-10"
+SET ProjectDate = "10 May 22"
 WHERE ProjectID = 2;
 -- @block
 UPDATE projects
-SET ProjectDate = "2023-01-04"
+SET ProjectDate = "4 Jan 23"
 WHERE ProjectID = 3;
 
 -- @block

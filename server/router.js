@@ -14,11 +14,12 @@ const router = express.Router();
 // public filepath for reuse
 const pub = path.resolve(__dirname, "../public/");
 
-// get all records
+// return index.html
 router.get('/index.html', async (req, res, nest) => {
     try {
-        let results = await database.all();
-        res.send(results);
+        let results = await database.random_three();
+        let resultsJSON = JSON.parse(JSON.stringify(results));
+        res.render("index", {data: resultsJSON});
     }
     catch(err) {
         console.log(err);
