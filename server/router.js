@@ -122,7 +122,7 @@ router.post('/sendemail', (req, res) => {
 
     // send email from logged in acconut to specified user
     transporter.sendMail(mailOptions, (error, info) => {
-        if(error){ // error
+        if(error){ // errorS
             console.log(error);
             res.send('error');
         }
