@@ -9,14 +9,14 @@
 	* Projects - Different projects that I have completed
 	* Categories - What type of project is it?
 
-#### Diagram
+### Diagram
 
 The Projects table has a many-to-one relationship with the Categories table. One category can have many projects, where as a project can only have one category.
 
 ![](images/entity-relationship-diagram.png)
 
 
-#### Projects Table
+### Projects Table
 
 * ProjectID
 * ProjectTitle - Name of project
@@ -27,12 +27,12 @@ The Projects table has a many-to-one relationship with the Categories table. One
 * ProjectCategoryIDFK - Category of project
 * ProjectViews - How many views the project link page has recieved
 
-#### Categories
+### Categories
 
 * CategoryID
 * CategoryName - Name of category
 
-#### Queries
+### Queries
 
 * Access all data in Projects table
 * Access 3 random records in Projects table
