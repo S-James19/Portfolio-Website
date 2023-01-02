@@ -96,7 +96,7 @@ I increased the border size of the buttons, and boldness of text. On hover, I ad
 
 4. Fixed navbar issue on small screen devices
 
-One issue with resizing windows was the smaller-screen navbar. The menubards did not disappear on click, and sometimes caused error on navbar.
+One issue with resizing windows was the smaller-screen navbar. The menuboards did not disappear on click, and sometimes caused error on navbar.
 
 ![](images/four-before.png)
 ![](images/four-after.png)
