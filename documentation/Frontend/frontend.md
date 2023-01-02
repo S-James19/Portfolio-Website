@@ -73,7 +73,9 @@ In response to the feedback, I have modified my website in the following ways.
 
 **1. Removed phone number & email address from contact.html**
 
+#### Before
 ![](images/one-before.png)
+#### After
 ![](images/one-after.png)
 
 
@@ -86,11 +88,13 @@ Due to feedback, I decided to instead code it via the backend so that I could hi
 
 **3. Modified button styling & hover effects**
 
+#### Before
 ![](images/three-before.png)
 ![](images/three-before-two.png)
 
 I increased the border size of the buttons, and boldness of text. On hover, I added a glow effect, and underline effect to show hovering for user.
 
+#### After
 ![](images/three-after.png)
 ![](images/three-after-two.png)
 
@@ -98,7 +102,9 @@ I increased the border size of the buttons, and boldness of text. On hover, I ad
 
 One issue with resizing windows was the smaller-screen navbar. The menuboards did not disappear on click, and sometimes caused error on navbar.
 
+#### Before
 ![](images/four-before.png)
+#### After
 ![](images/four-after.png)
 
 
