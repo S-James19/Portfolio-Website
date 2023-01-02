@@ -1,6 +1,6 @@
 ## HCI Analysis
 
-For my portfolio website, I have undertaken a HCI analysis investigatio.
+For my portfolio website, I have undertaken a HCI analysis investigation.
 
 ### What is it? What does it involve?
 
