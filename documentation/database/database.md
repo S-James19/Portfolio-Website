@@ -67,7 +67,7 @@ Here's an example implementation for one of the pages, it includes the dynamical
 
 ![](images/code-implementation-6.png)
 
-As a result, the cards are now being rendered to the user on the page.
+As a result, cards are now being rendered to the user on the page.
 
 ![](images/working-implementation.png)
 
