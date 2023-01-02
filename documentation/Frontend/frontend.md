@@ -32,25 +32,25 @@ To conduct my HCI investigation, here is the following approach that I took.
 
 Here are the generic responses that I recieved from the following questions, I had 3 responses.
 
-1. How easy was it for you to find the information you wanted? (Hard 1, Easy 5)
+**1. How easy was it for you to find the information you wanted?** (Hard 1, Easy 5)
 4/5, 4/5, 5/5
 
-2. Did you find the website structure easy to follow? (Easy 1, Hard 5)
+**2. Did you find the website structure easy to follow?** (Easy 1, Hard 5)
 1/5, 4/5, 4/5
 
-3. Do you like looking at the website? (Hate 1, Love 5)
+**3. Do you like looking at the website?** (Hate 1, Love 5)
 4/5, 4/5, 5/5
 
-4. What device are you viewing this website on?
+**4. What device are you viewing this website on?** (PC, Mobile, Tablet)
 PC, PC, PC
 
-5. How easy was it to read the presented information on your device? (Hard 1, Easy 5)
+**5. How easy was it to read the presented information on your device?** (Hard 1, Easy 5)
 3/5, 4/5, 5/5
 
-6. How would you rate the website's color scheme? (Hate 1, Love 5)
+**6. How would you rate the website's color scheme?** (Hate 1, Love 5)
 4/5, 5/5, 5/5
 
-7. Do you like the fonts used? (Hate 1, Love 5)
+**7. Do you like the fonts used?** (Hate 1, Love 5)
 4/5, 5/5, 5/5
 
 Some of the positives that I recieved from the website were as follows:
