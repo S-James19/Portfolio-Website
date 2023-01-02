@@ -32,7 +32,7 @@ The Projects table has a many-to-one relationship with the Categories table. One
 * CategoryID
 * CategoryName - Name of category
 
-### Queries
+### Queries Required in Code
 
 * Access all data in Projects table
 * Access 3 random records in Projects table
