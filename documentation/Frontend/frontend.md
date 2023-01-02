@@ -71,20 +71,20 @@ The common suggestions to improve the human computer interaction for my website 
 
 In response to the feedback, I have modified my website in the following ways.
 
-1. Removed phone number & email address from contact.html
+**1. Removed phone number & email address from contact.html
 
 ![](images/one-before.png)
 ![](images/one-after.png)
 
 
-2. Re-structured contact form plans from frontend to backend
+**2. Re-structured contact form plans from frontend to backend
 
 At the time I had not coded the functionality for the sending of emails. However, origionally I was planning on sending it straight from the frontend. 
 Due to feedback, I decided to instead code it via the backend so that I could hide my contact details from the user and reduce spam attempts.
 
 ![](images/two-one.png)
 
-3. Modified button styling & hover effects
+**3. Modified button styling & hover effects
 
 ![](images/three-before.png)
 ![](images/three-before-two.png)
@@ -94,7 +94,7 @@ I increased the border size of the buttons, and boldness of text. On hover, I ad
 ![](images/three-after.png)
 ![](images/three-after-two.png)
 
-4. Fixed navbar issue on small screen devices
+**4. Fixed navbar issue on small screen devices
 
 One issue with resizing windows was the smaller-screen navbar. The menuboards did not disappear on click, and sometimes caused error on navbar.
 
