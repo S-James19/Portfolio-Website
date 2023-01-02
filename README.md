@@ -1,23 +1,35 @@
-## Portfolio Website
+## Personal Portfolio Website
 
----
+### About Project
 
-### About
-
-Currently in my second year of university, I am working on developing a portfolio website for myself. 
-
-I decided to build this project as I had never before experienced working with web technologies and I am in a position where I will be looking for work experience, so it seemed to me to be the perfect oppurtunity to build on my current skillset as well as make a project that I can take into the real world.
-
-It is a basic website with a home, about, projects and contact page.
-
-It is currently static, and I am currently working on the javascript and database/server side of the website.
-
----
+As part of my course in my second year, I created a personal portfolio website. The website includes:
+* Front End
+  * Home Page
+  * About Page
+  * Projects Page
+  * Contact Page
+* Back End
+  * GET/POST REST API
+  * Projects Database
+  * Dynamic HTML generation
+  * Send email from contact form
 
 ### Technologies Used
-
-To create the website, I have utilized the following technologies:
 
 * HTML
 * CSS
 * JavaScript
+* MySQL & SQL
+* Node.Js
+* Express.Js
+
+### Setup Information
+
+1. Clone / Download repository
+2. Move [.env file]() into private folder and fill in fields.
+3. Install and setup [MySql Commuinty Server](https://dev.mysql.com/downloads/mysql/).
+4. Install Node.Js [Node.js](https://nodejs.org/en/).
+5. Use [CardsDatabase.sql] queries to setup database.
+6. Open CMD, select repo as current directory, and run 'install npm'.
+7. Open CMD, select repo and run 'npm run dev'
+8. Open browser, open localhost:portnumber/page i.e. localhost:3000/index.html
