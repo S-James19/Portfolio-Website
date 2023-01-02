@@ -14,7 +14,7 @@ const connectionPool = mysql.createPool({
     connectionLimit: 10,
     password: process.env.USER_PASSWORD,
     user: process.env.USER_NAME,
-    database: 'cards',
+    database: process.env.DATABASE_NAME,
     host: 'localhost',
     port: '3306'
 })
