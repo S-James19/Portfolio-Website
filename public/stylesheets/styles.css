@@ -6,16 +6,19 @@
 @font-face {
     font-family: 'Montserrat-extra-bold';
     src: url('../fonts/Montserrat/static/Montserrat-ExtraBold.ttf');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Montserrat-regular';
     src: url('../fonts/Montserrat/static/Montserrat-Regular.ttf');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Montserrat-light';
     src: url('../fonts/Montserrat/static/Montserrat-Light.ttf');
+    font-display: swap;
 }
 
 /*--------------- General ----------------*/
@@ -26,7 +29,7 @@ html {
     color: white;
 }
 body * {
-    font-family: 'Montserrat-regular', Fallback, sans-serif;
+    font-family: 'Montserrat-regular', Arial, Helvetica, sans-serif;
     text-decoration: none;
     list-style: none;
     letter-spacing: 1px;
