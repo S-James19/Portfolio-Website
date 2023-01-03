@@ -23,30 +23,15 @@ const pub = path.resolve(__dirname, "../public/");
 
 // return index.html
 router.get('/index.html', async (req, res, nest) => {
-    try {
-        let results = await database.random_three(); // get database records
-        let resultsJSON = JSON.parse(JSON.stringify(results)); // parse to JSON format
-        res.render("index", {data: resultsJSON}); // render dynamic content and return to user
-    }
-    catch(err) { // page error
-        console.log(err);
-        res.sendStatus(500);
-    }
+    DyanmicRenderingCards(req, res, nest, database.random_three, "projects");
 })
 
 // return projects.html
 router.get('/projects.html', async (req, res, nest) => {
-    try {
-        let results = await database.all(); // get database records
-        let resultsJSON = JSON.parse(JSON.stringify(results)); // parse to JSON format
-        res.render("projects", {data: resultsJSON}); // render dynamic content and return to user
-        
-    }
-    catch(err) {
-        console.log(err);
-        res.sendStatus(500);
-    }
+
+    DyanmicRenderingCards(req, res, nest, database.all, "projects");
 })
+
 
 //return about.html
 router.get('/about.html', (req, res) => {
@@ -58,43 +43,47 @@ router.get('/contact.html', (req, res) => {
     res.sendFile(path.join(pub, "html/contact.html"));
 });
 
+async function DyanmicRenderingCards(req, res, nest, func, filename) 
+{
+    try {
+        let results = await func(); // get database records
+        let resultsJSON = JSON.parse(JSON.stringify(results)); // parse to JSON format
+        res.render(filename, {data: resultsJSON}); // render dynamic content and return to user
+        
+    }
+    catch(err) {
+        console.log(err);
+        res.sendStatus(500);
+    }
+}
 // ---------- INDIVIDUAL PROJECTS ---------- //
 
 // return portfolio 
 router.get('/portfolio.html', (req, res) => {
-    try {
-        database.updateViewers(3); // get all records in database
-        res.sendFile(path.join(pub, "html/projects/portfolio.html"));
-    }
-    catch(err) {
-        console.log(err);
-        res.sendStatus(500);
-    }
+    ReturnProject(req, res, 1, "html/projects/portfolio.html");
 });
 
 // return portfolio 
 router.get('/infinite-insect-runner.html', (req, res) => {
-    try {
-        database.updateViewers(2); // get all records in database
-        res.sendFile(path.join(pub, "html/projects/infinite-insect-runner.html"));
-    }
-    catch(err) {
-        console.log(err);
-        res.sendStatus(500);
-    }
+    ReturnProject(req, res, 1, "html/projects/infinite-insect-runner.html");
 });
 
 // return operation extermination
 router.get('/operation-extermination.html', (req, res) => {
+    ReturnProject(req, res, 1, "html/projects/operation-extermination.html");
+});
+
+// function to return the page of a project requested by the user
+function ReturnProject(req, res, id, filepath) {
     try {
-        database.updateViewers(1); // get all records in database
-        res.sendFile(path.join(pub, "html/projects/operation-extermination.html"));
+        database.updateViewers(id); // get all records in database
+        res.sendFile(path.join(pub, filepath));
     }
     catch(err) {
         console.log(err);
         res.sendStatus(500);
     }
-});
+}
 
 // ---------- MAIL SERVER ----------- //
 
