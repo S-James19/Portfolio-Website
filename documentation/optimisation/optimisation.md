@@ -15,7 +15,7 @@ Google Lighthouse tests the website for multiple different categories which cont
 	* Reducing unused Javascript & CSS
 	* How big the transfer of files is over the network
 	* Javascript execution time
-* Accessability - Examples include:
+* Accessibility - Examples include:
 	* How usable is the website for different types of people, e.g. different languages, disabilities ,etc?
 	* How can assistative technology interact with the website?
 	* Are elements described properly for their purpose?
@@ -45,7 +45,7 @@ After conducting initial tests on my website, and doing some analysis myself, he
 	5. Images were not in next-gen web formats
 		* Slower downloads and more data consumption from user
 
-* Accessability
+* Accessibility
 	1. HTML tag had no language attribute
 		* Screen readers may not announce text correctly.
 	2. Links had no discernible name
@@ -67,14 +67,14 @@ After conducting initial tests on my website, and doing some analysis myself, he
 * I created functions to handle the tasks, and each request instead used that function.
 
 **Before - Rendering dynamic html cards **
-![](documentation/optimisation/actions/cards-rendering-before.png)
+![](actions/cards-rendering-before.png)
 **After**
-![](documentation/optimisation/actions/cards-rendering-after.png)
+![](actions/cards-rendering-after.png)
 
 **Before - Updating individual project views **
-![](documentation/optimisation/actions/updating-viewers-before.png)
+![](actions/updating-viewers-before.png)
 **After**
-![](documentation/optimisation/actions/updating-viewers-after.png)
+![](actions/updating-viewers-after.png)
 
 ##### 2. Large network payloads were identified
 
@@ -86,35 +86,33 @@ After conducting initial tests on my website, and doing some analysis myself, he
 * Seperated CSS files, as some pages, such as contact.html, were requesting content it did not need, such as cards css, that were not used on that page, to reduce uneccessary data requested..
 
 **Before **
-![](documentation/optimisation/actions/css-structure-before.png)
+![](actions/css-structure-before.png)
 **After**
-![](documentation/optimisation/actions/css-structure-after.png)
+![](actions/css-structure-after.png)
 
 * Compressed images to reduce file sizes when being loaded
 
-![](documentation/optimisation/actions/compressing-image-sizes.png)
+![](actions/compressing-image-sizes.png)
 
 ##### 3. No fallback font while website font is downloaded.
 
 * Added 'font-display: swap' to each font used on website, and set fallback font so that a default font will load, until the requested font has been downloaded.
 
+![](actions/font-display.png)
 
-![](documentation/optimisation/actions/font-display.png)
-
-
-#### Accessability
+#### Accessibility
 
 ##### 1. HTML tag had no language attribute
 
 * Added 'lang=en' to html element on each webpage.
 
-![](documentation/optimisation/actions/html-lang.png)
+![](actions/html-lang.png)
 
 ##### 2. Links had no discernible name
 
 * Added 'aria-label' attribute to each link used on page and a description.
 
-![](documentation/optimisation/actions/footer.png)
+![](actions/footer.png)
 
 #####	3. About.html - Graph colours did not have a sufficient ratio
 
@@ -122,13 +120,13 @@ After conducting initial tests on my website, and doing some analysis myself, he
 * Chose a new colour which had a better contrast ratio
 * Modified color in css.
 
-![](documentation/optimisation/actions/graph-contrast-before.png)
-![](documentation/optimisation/actions/graph-contrast-after.png)
+![](actions/graph-contrast-before.png)
+![](actions/graph-contrast-after.png)
 
 **Before **
-![](documentation/optimisation/actions/graph-before.png)
+![](actions/graph-before.png)
 **After**
-![](documentation/optimisation/actions/graph-after.png)
+![](actions/graph-after.png)
 
 #### SEO
 
@@ -139,9 +137,9 @@ After conducting initial tests on my website, and doing some analysis myself, he
 	* Description
 	* Keywords
 
-![](documentation/optimisation/actions/metadata.png)
-
-#### Impacts
+![](actions/metadata.png)
+	
+##### Impacts
 
 After I made these changes, I re-ran all of the origional tests that I conducted, to see the impact rating. Here is the before and after:
 
