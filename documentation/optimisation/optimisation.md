@@ -84,7 +84,7 @@ After conducting initial tests on my website, and doing some analysis myself, he
 
 * Seperated CSS files, as some pages, such as contact.html, were requesting content it did not need, such as cards.css, that were not used on that page, to reduce uneccessary data requested.
 
-**Before **
+**Before**
 ![](modifications/css-structure-before.png)
 **After**
 ![](modifications/css-structure-after.png)
@@ -122,7 +122,7 @@ After conducting initial tests on my website, and doing some analysis myself, he
 ![](modifications/graph-contrast-before.png)
 ![](modifications/graph-contrast-after.png)
 
-**Before **
+**Before**
 ![](modifications/graph-before.png)
 **After**
 ![](modifications/graph-after.png)
