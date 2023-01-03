@@ -4,8 +4,7 @@ I have conducted an investigation to improve the performance of my website.
 
 ### Method
 
-To conduct my investigation, I have made use of a profiling tool called Google Lighthouse. This is a tool that can be downloaded as a website browser extenstension that scans
-the webpage with different tests, and returns an overall score depending on how well the tests do.
+To conduct my investigation, I have made use of a profiling tool called [Google Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=fr). This is a tool that can be downloaded as a website browser extension that scans the webpage with different tests, and returns an overall score depending on how well the tests do.
 
 Google Lighthouse tests the website for multiple different categories which contribute to the performance of the website, these include the following:
 
@@ -15,9 +14,9 @@ Google Lighthouse tests the website for multiple different categories which cont
 	* Reducing unused Javascript & CSS
 	* How big the transfer of files is over the network
 	* Javascript execution time
-* Accessability - Examples include:
-	* How usable is the website for different types of people, e.g. different languages, disabilities ,etc?
-	* How can assistative technology interact with the website?
+* Accessibility - Examples include:
+	* How usable is the website for different types of people, e.g. different languages, disabilities, etc?
+	* How can assistive technology interact with the website?
 	* Are elements described properly for their purpose?
 * Best Practises - Examples include:
 	* Does the website use HTTPS?
@@ -35,22 +34,22 @@ After conducting initial tests on my website, and doing some analysis myself, he
 
 * Performance
 	1. Backend code had duplicating functionality.
-		* Slower website load times
-	2. Large network payloads were identified
-		* Slower webpage load speeds
-	3. No fallback font while website font is downloaded.
-		* Font wont render until custom font is downloaded, major issue on mobile devices specifically as they took a lot longer to download.
-	4. Images were not properly sized with a fixed width/height fields
-		* Increases data transfer and slows down load time
-	5. Images were not in next-gen web formats
-		* Slower downloads and more data consumption from user
+		* Slower website load times.
+	2. Large network payloads were identified.
+		* Slower webpage load speeds.
+	3. No fallback font while website font is downloading.
+		* Font won't render until custom font is downloaded, major issue on mobile devices specifically as they took a lot longer to download on tests.
+	4. Images were not properly sized with fixed width/height fields.
+		* Increases data transfer and slows down load time.
+	5. Images were not in next-gen web formats.
+		* Slower downloads and more data consumption from user.
 
-* Accessability
-	1. HTML tag had no language attribute
+* Accessibility
+	1. HTML tag had no language attribute.
 		* Screen readers may not announce text correctly.
-	2. Links had no discernible name
+	2. Links had no discernible name.
 		* Reduces user experience for screen readers.
-	3. About.html - Graph colours did not have a sufficient ratio
+	3. About.html - Graph colours did not have a sufficient contrast ratio
 		* Difficult for some users to read/understand.
 
 * SEO
@@ -63,15 +62,15 @@ After conducting initial tests on my website, and doing some analysis myself, he
 
 ##### 1. Backend had duplicating functionality
 
-* Router.js had multiple get requests doing the same tasks
+* Router.js had multiple GET requests doing the same tasks
 * I created functions to handle the tasks, and each request instead used that function.
 
-**Before - Rendering dynamic html cards **
+**Before**
 ![](modifications/cards-rendering-before.png)
 **After**
 ![](modifications/cards-rendering-after.png)
 
-**Before - Updating individual project views **
+**Before**
 ![](modifications/updating-viewers-before.png)
 **After**
 ![](modifications/updating-viewers-after.png)
@@ -83,7 +82,7 @@ After conducting initial tests on my website, and doing some analysis myself, he
 	* Unused fonts in fonts folder
 	* Unused CSS
 
-* Seperated CSS files, as some pages, such as contact.html, were requesting content it did not need, such as cards css, that were not used on that page, to reduce uneccessary data requested..
+* Seperated CSS files, as some pages, such as contact.html, were requesting content it did not need, such as cards.css, that were not used on that page, to reduce uneccessary data requested.
 
 **Before **
 ![](modifications/css-structure-before.png)
@@ -94,15 +93,13 @@ After conducting initial tests on my website, and doing some analysis myself, he
 
 ![](modifications/compressing-image-sizes.png)
 
-##### 3. No fallback font while website font is downloaded.
+##### 3. No fallback font while website font is downloading
 
 * Added 'font-display: swap' to each font used on website, and set fallback font so that a default font will load, until the requested font has been downloaded.
 
-
 ![](modifications/font-display.png)
 
-
-#### Accessability
+#### Accessibility
 
 ##### 1. HTML tag had no language attribute
 
@@ -116,7 +113,7 @@ After conducting initial tests on my website, and doing some analysis myself, he
 
 ![](modifications/footer.png)
 
-#####	3. About.html - Graph colours did not have a sufficient ratio
+##### 3. About.html - Graph colours did not have a sufficient contrast ratio
 
 * Measured origional colour contrast ratio
 * Chose a new colour which had a better contrast ratio
