@@ -24,6 +24,10 @@
     padding-bottom: 5%;
 }
 
+.graph-content * {
+    color: rgba(0, 0, 0, 1);
+}
+
 .graph-bar {
     height: clamp(25px, 7.5vh, 80px);
     width: 0;
