@@ -26,7 +26,7 @@ As part of my course in my second year, I created a personal portfolio website. 
 ### Setup Information
 
 1. Clone / Download repository
-2. Install and setup [MySql Installer](https://dev.mysql.com/downloads/installer/). ![](documentation/readme-setup/mysqldownload)
+2. Install and setup [MySql Installer](https://dev.mysql.com/downloads/installer/). ![](documentation/readme-setup/mysqldownload.png)
 3. Install [Node.js](https://nodejs.org/en/).
 4. Create database in MySQL ![](documentation/readme-setup/mysqlsetup.png)
 5. Use [CardsDatabase.sql](https://github.falmouth.ac.uk/SJ272585/WEB230-Assignment-1/blob/main/server/sql/CardsDatabase.sql) queries to setup database.
