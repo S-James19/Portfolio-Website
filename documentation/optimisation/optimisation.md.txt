@@ -1,0 +1,56 @@
+## Optimisation
+
+I have conducted an investigation to improve the performance of my website.
+
+### Method
+
+To conduct my investigation, I have made use of a profiling tool called Google Lighthouse. This is a tool that can be downloaded as a website browser extenstension that scans
+the webpage with different tests, and returns an overall score depending on how well the tests do.
+
+Google Lighthouse tests the website for multiple different categories which contribute to the performance of the website, these include the following:
+
+* Performance - Examples include:
+	* How fast does the website load content?
+	* How long does it take to load resources from the server?
+	* Reducing unused Javascript & CSS
+	* How big the transfer of files is over the network
+	* Javascript execution time
+* Accessability - Examples include:
+	* How usable is the website for different types of people, e.g. different languages, disabilities ,etc?
+	* How can assistative technology interact with the website?
+	* Are elements described properly for their purpose?
+* Best Practises - Examples include:
+	* Does the website use HTTPS?
+	* Does the website use the boilerplate template?
+	* Does the website properly define the charset?
+* SEO (Search Engine) Optimisation - Examples include:
+	* Has the website got suitable meta data to be found?
+	* Is the website responsive?
+	* Are elements described properly for their purpose?
+	* Does the document have a suitable font size?
+
+### Identified Issues
+
+After conducting initial tests on my website, here are the following issues that were identified.
+
+* Performance
+	* Images were not properly sized with a fixed width/height fields
+		* Increases data transfer and slows down load time
+	* Images were not in next-gen web formats
+		* Slower downloads and more data consumption from user
+	* Large network payloads were identified
+		* Slower webpage load speeds, 
+	* No fallback font while website font is downloaded.
+		* Font wont render until custom font is downloaded, major issue on mobile devices specifically as they took a lot longer to download.
+
+* Accessability
+	* HTML tag had no language attribute
+		* Screen readers may not announce text correctly.
+	* Links had no discernible name
+		* Reduces user experience for screen readers.
+	* About.html - Graph colours did not have a sufficient ratio
+		* Difficult for some users to read/understand.
+
+* SEO
+	* Lacking meta descriptions
+		* Used by search engines to gather information about website and rank page compared to other pages. Makes the website harder to find.
