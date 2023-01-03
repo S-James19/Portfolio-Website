@@ -29,18 +29,6 @@ router.get('/projects.html', async (req, res, nest) => {
     DyanmicRenderingCards(req, res, nest, database.all, "projects");
 })
 
-
-//return about.html
-router.get('/about.html', (req, res) => {
-    res.sendFile(path.join(pub, "html/about.html"));
-});
-
-//return contact.html
-router.get('/contact.html', (req, res) => {
-    res.sendFile(path.join(pub, "html/contact.html"));
-});
-
-//funcrion to dynamically render html pages with cards
 async function DyanmicRenderingCards(req, res, nest, func, filename) 
 {
     try {
@@ -54,6 +42,18 @@ async function DyanmicRenderingCards(req, res, nest, func, filename)
         res.sendStatus(500);
     }
 }
+
+//return about.html
+router.get('/about.html', (req, res) => {
+    res.sendFile(path.join(pub, "html/about.html"));
+});
+
+//return contact.html
+router.get('/contact.html', (req, res) => {
+    res.sendFile(path.join(pub, "html/contact.html"));
+});
+
+//funcrion to dynamically render html pages with cards
 // ---------- INDIVIDUAL PROJECTS ---------- //
 
 // return portfolio 
