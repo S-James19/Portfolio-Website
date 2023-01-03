@@ -1,11 +1,9 @@
 // code from - https://www.youtube.com/watch?v=LVfH5FDOa3o
 
 // access modules
-const exp = require('constants');
 const express = require('express');
 const path = require('path');
 const apiRouter = require('./router');
-const mailer = require('nodemailer');
 const parser = require('body-parser');
 
 // access .env file storing username and password for mysql

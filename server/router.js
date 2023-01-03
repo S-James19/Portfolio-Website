@@ -4,9 +4,6 @@
 const express = require('express');
 const database = require('./database');
 const path = require('path');
-const { json } = require('express');
-const fs = require('fs');
-const { stringify } = require('querystring');
 const mailer = require('nodemailer');
 
 // private .env file path
@@ -43,6 +40,7 @@ router.get('/contact.html', (req, res) => {
     res.sendFile(path.join(pub, "html/contact.html"));
 });
 
+//funcrion to dynamically render html pages with cards
 async function DyanmicRenderingCards(req, res, nest, func, filename) 
 {
     try {
