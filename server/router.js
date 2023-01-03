@@ -20,7 +20,7 @@ const pub = path.resolve(__dirname, "../public/");
 
 // return index.html
 router.get('/index.html', async (req, res, nest) => {
-    DyanmicRenderingCards(req, res, nest, database.random_three, "projects");
+    DyanmicRenderingCards(req, res, nest, database.random_three, "index");
 })
 
 // return projects.html

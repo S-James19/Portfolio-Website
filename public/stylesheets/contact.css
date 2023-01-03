@@ -1,0 +1,114 @@
+/*--------------- Contact ----------------*/
+
+.contact-information p {
+    font-size: clamp(1rem, 2.6vmin, 1.6rem);
+    word-break: break-all;
+}
+
+.contact-information {
+    margin: 20px 0;
+}
+
+.contact-information h3 {
+    margin: 15px 0;
+}
+
+.contact-information p {
+    padding: 0;
+}
+
+.contact-socials {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.contact-socials i {
+    font-size: clamp(25px, 5vw, 100px);
+    color: rgba(251, 129, 34, 1);
+    margin: 15% 0;
+}
+
+.contact-socials i:hover {
+    color: rgba(251, 129, 34, 0.5);
+}
+
+/*--------------- Contact Form ----------------*/
+
+.required::after {
+    content: "*";
+    color: rgba(251, 129, 34, 1);
+    position: absolute;
+    font-size: clamp(1.8rem, 2.6vmin, 2.4rem);
+    top: -5px;
+}
+
+.contact-form {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: clamp(15px, 5vw, 50px);
+}
+
+.contact-form * {
+    background-color: transparent;
+    color: white;
+}
+
+.contact-form-input input, .contact-form-message textarea, .contact-form-input select {
+    padding: 10px;
+    font-size: clamp(0.8rem, 2.6vmin, 1.2rem);
+    border: 2px solid white;
+}
+
+
+.contact-form-input input, .contact-form-input select {
+    width: 75%;
+    height: clamp(20px, 10vw, 50px);
+}
+
+.contact-form-input option {
+    color: #1e1e1e !important;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: clamp(1.2rem, 2.6vmin, 1.5rem);
+}
+
+.contact-form-message {
+    grid-column: span 2;
+    overflow: auto;
+}
+
+.contact-form-submit {
+    grid-column: span 2;
+}
+
+.contact-form-message textarea {
+    width: 75%;
+    height: clamp(50px, 20vw, 200px);
+    text-align: left;
+}
+
+@media(max-width: 720px) {
+    .contact-form {
+        grid-template-columns: 1fr;
+        width: 100%;
+        grid-row-gap: clamp(15px, 10vw, 50px);
+    }
+
+    .contact-form * {
+        grid-column: 1;
+    }
+
+    .contact-socials {
+        flex-direction: row;
+    }
+
+    .contact-socials a {
+        padding: 10px;
+    }
+}
