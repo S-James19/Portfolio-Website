@@ -7,7 +7,7 @@ I have conducted an investigation to improve the performance of my website.
 To conduct my investigation, I have made use of a profiling tool called Google Lighthouse. This is a tool that can be downloaded as a website browser extenstension that scans
 the webpage with different tests, and returns an overall score depending on how well the tests do.
 
-Google Lighthouse tests the website for multiple different categories which contribute to the performance of the website, these include the following:
+[Google Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=fr) tests the website for multiple different categories which contribute to the performance of the website, these include the following:
 
 * Performance - Examples include:
 	* How fast does the website load content?
