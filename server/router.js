@@ -30,6 +30,7 @@ router.get('/projects.html', async (req, res, nest) => {
     DyanmicRenderingCards(req, res, nest, database.all, "projects");
 })
 
+// function to dynamically render pages that use project cards
 async function DyanmicRenderingCards(req, res, nest, func, filename) 
 {
     try {
@@ -54,20 +55,19 @@ router.get('/contact.html', (req, res) => {
     res.sendFile(path.join(pub, "html/contact.html"));
 });
 
-//funcrion to dynamically render html pages with cards
 // ---------- INDIVIDUAL PROJECTS ---------- //
 
-// return portfolio 
+// return portfolio page
 router.get('/portfolio.html', (req, res) => {
     ReturnProject(req, res, 1, "html/projects/portfolio.html");
 });
 
-// return portfolio 
+// return insect runner page
 router.get('/infinite-insect-runner.html', (req, res) => {
     ReturnProject(req, res, 1, "html/projects/infinite-insect-runner.html");
 });
 
-// return operation extermination
+// return operation extermination page
 router.get('/operation-extermination.html', (req, res) => {
     ReturnProject(req, res, 1, "html/projects/operation-extermination.html");
 });
@@ -87,7 +87,6 @@ function ReturnProject(req, res, id, filepath) {
 // ---------- MAIL SERVER ----------- //
 
 //send email using data from contact form
-
 router.post('/sendemail', async (req, res) => {
     try {
         await mail.SendEmail(req, res);  // to see if email was successfully sent
