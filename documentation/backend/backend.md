@@ -51,7 +51,7 @@ To implement the designs, I used the following technologies:
 
 
 **Example from code**
-![images/router]
+![](images/router)
 
 * Database.js script **MODEL**
 	* Creating connection pool between server and database.
