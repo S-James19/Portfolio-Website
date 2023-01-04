@@ -23,10 +23,10 @@ Key heuristics that are focused on involve:
 To conduct my HCI investigation, here is the following approach that I took.
 
 * I researched the different types of heuristics and features of a website that need to be measured.
-* I created a google form covering different types of questions from different areas of the website, including:
+* I created a Google form covering different types of questions from different areas of the website, including:
 	* Direct questions, e.g. Do you like this?
 	* Number scales, e.g. How much out of 10 would you agree to this?
-* I sent this form out to a number of my fellow colleagues to collect responses.
+* I sent this form out to a number of people to collect responses.
 
 ### My responses
 
@@ -36,10 +36,10 @@ Here are the generic responses that I recieved from the following questions, I h
 4/5, 4/5, 5/5
 
 **2. Did you find the website structure easy to follow?** (Easy 1, Hard 5)
-1/5, 4/5, 4/5
+1/5, 1/5, 4/5
 
 **3. Do you like looking at the website?** (Hate 1, Love 5)
-4/5, 4/5, 5/5
+4/5, 5/5, 5/5
 
 **4. What device are you viewing this website on?** (PC, Mobile, Tablet)
 PC, PC, PC
@@ -64,8 +64,8 @@ Some of the positives that I recieved from the website were as follows:
 The common suggestions to improve the human computer interaction for my website were as follows:
 
 * Remove phone number and email address from contact form, contact form should filter out spam contact requests without giving out info.
-* The buttons could be more defined when hovering over them
-* Issues with resizing windows, including email being cutoff before it moves
+* The buttons could be more defined when hovering over them.
+* Issues with resizing windows, including email being cutoff before it moves.
 
 ### Implementation of changes
 
