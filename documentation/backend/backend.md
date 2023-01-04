@@ -36,7 +36,7 @@ To implement the designs, I used the following technologies:
 
 ### Implementation
 
-* Server.js script.
+* server.js script.
 	* Sets up Express.js application.
 	* Adds middleware functionality to application.
 	* Sets view engine for rendering dynamic content.
@@ -44,7 +44,7 @@ To implement the designs, I used the following technologies:
 
 ![](images/server.png)
 
-* Router.js script **CONTROLLER / MODEL**
+* router.js script **CONTROLLER**
 	* The REST API for the backend server.
 	* Sets up router for recieving client requests.
 	* Passes data to Model scripts.
@@ -54,11 +54,20 @@ To implement the designs, I used the following technologies:
 **Example from code**
 ![](images/router.png)
 
-* Database.js script **MODEL**
+* database.js script **MODEL**
 	* Creating connection pool between server and database.
-	* Recieve requests from Router.js.
+	* Recieve requests from router.js.
 	* Run queries based on request.
 	* Return data / response.
 
 ![](images/connection.png)
 ![](images/database.png)
+
+* mail.js script **MODEL**
+	* Recieves email data from router.js.
+	* Signs in to user account.
+	* Formats email.
+	* Sends email.
+	* Returns whether email was successfully sent to router.js.
+
+![](images/mailer.png)
