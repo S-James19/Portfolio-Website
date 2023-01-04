@@ -54,8 +54,7 @@ Login info to the database is stored in the code, using environment variables to
 
 ![](images/code-implementation-4.png)
 
-Here is showing the three queries in code. The database is passed one of the three queries, and executes the query.
-If required, the function will return data to be used.
+Here is showing the three queries in code. Depending on the client's request, one of these functions is executed.
 
 ![](images/code-implementation-3.png)
 
