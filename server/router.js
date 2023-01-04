@@ -4,7 +4,8 @@
 const express = require('express');
 const database = require('./database');
 const path = require('path');
-const mailer = require('nodemailer');
+const mailer = require('./mail');
+const mail = require('./mail');
 
 // private .env file path
 require('dotenv').config({path: path.resolve(__dirname, "../private/.env")});
@@ -87,37 +88,16 @@ function ReturnProject(req, res, id, filepath) {
 
 //send email using data from contact form
 
-// code reference: https://www.youtube.com/watch?v=30VeUWxZjS8&t=277s
-router.post('/sendemail', (req, res) => {
+router.post('/sendemail', async (req, res) => {
+    try {
+        await mail.SendEmail(req, res);  // to see if email was successfully sent
+        res.sendFile(path.join(pub, "html/contact.html")); // to send user back file
+    }
+    catch(err) { // email did not send
+        console.log(err);
+        res.sendStatus(500);
+    }
 
-    //setup user account to send the emails from
-    const transporter = mailer.createTransport( {
-        service: 'gmail',
-        auth: {
-            user: process.env.USER_EMAIL,
-            pass: process.env.USER_EMAIL_PASSWORD
-        }
-    });
-
-    //setup email content to send to user
-    const mailOptions = {
-        from: req.body.Email,
-        to: process.env.USER_EMAIL,
-        subject: `Message from: ${req.body.Title}: ${req.body.Name}, ${req.body.Email}`,
-        text: req.body.Message
-    };
-
-    // send email from logged in acconut to specified user
-    transporter.sendMail(mailOptions, (error, info) => {
-        if(error){ // errorS
-            console.log(error);
-            res.send('error');
-        }
-        else { // successfully sent 
-            console.log(req.body);
-            res.sendFile(path.join(pub, "html/contact.html")); // return page
-        }
-    });
 });
 
 //export module
