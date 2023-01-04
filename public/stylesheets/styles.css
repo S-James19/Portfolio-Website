@@ -394,6 +394,7 @@ html::-webkit-scrollbar-track {
         font-size: clamp(0.75rem, 9vmin, 2.5rem);
         font-weight: 100;
         padding: 0 2% 0 0;
+        z-index: 11;
     }
 
     #navbar * {
@@ -434,6 +435,7 @@ html::-webkit-scrollbar-track {
         margin-top: 5%;
         position: fixed;
         right: 0;
+        z-index: 10;
     }
 
     .portrait {
