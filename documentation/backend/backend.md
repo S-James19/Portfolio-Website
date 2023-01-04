@@ -31,6 +31,7 @@ To implement the designs, I used the following technologies:
 
 * Node.js - Environment to run JavaScipt on server.
 * Express.js - To build RESTful API controller.
+* Nodemailer - Module to send email using data.
 * MYSql - To store projects data.
 
 ### Implementation
