@@ -2,26 +2,26 @@
 
 ### Website Requirements
 
-For developing the site, I needed to define the requirements, they were as follows:
+The requirements for the website were as follows:
 
-* 4 web pages
-	*Home, 
-	*About me 
-	*Projects 
-	*Contact
+* 4 pages
+	* Home
+	* About 
+	* Projects 
+	* Contact
 * Database
-	* Store project information to be displayed on cards.
+	* Stores project information to be displayed on cards
 * Mail functionality
 	* Send email from form on contact page
 
 ### Data Flow
 
-![](images/mvc-diagram)
+![](images/mvc-diagram.png)
 
 * The client will send a HTTP request to the server, to get or pass data.
 * An API will access this request, and pass on the relevant data to the required scripts.
-* These scripts will do their functionality, e.g. database script to access database via queries and connection.
-* The scripts will return the data/status code of action back to the API controller.
+* These scripts will do their functionality, e.g. database script to connect and communicate with the database.
+* The scripts will return the data/status code of the action back to the API controller.
 * The API controller will update the view with the data/status code.
 * The API controller will then return the requested data/status code back to client.
 
@@ -38,26 +38,26 @@ To implement the designs, I used the following technologies:
 * Server.js script.
 	* Sets up Express.js application.
 	* Adds middleware functionality to application.
-	* Sets view engine for rendering dynamic HTML.
+	* Sets view engine for rendering dynamic content.
 	* Opens port for connection.
 
-![](images/server)
+![](images/server.png)
 
 * Router.js script **CONTROLLER / MODEL**
 	* The REST API for the backend server.
 	* Sets up router for recieving client requests.
-	* Accesses Model scripts depending on requests.
-	* Communicates with view via 'res.Send', 'res.SendFile' and 'res.Render' methods.
+	* Passes data to Model scripts.
+	* Communicates with View via 'res.Send', 'res.SendFile' and 'res.Render' methods.
 
 
 **Example from code**
-![](images/router)
+![](images/router.png)
 
 * Database.js script **MODEL**
 	* Creating connection pool between server and database.
 	* Recieve requests from Router.js.
-	* Run specific query based on request to access / update specific data.
+	* Run queries based on request.
 	* Return data / response.
 
-![](images/connection)
-![](images/database)
+![](images/connection.png)
+![](images/database.png)
