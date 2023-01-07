@@ -8,31 +8,30 @@ const formSubject = document.getElementById('formSubject');
 const formMessage = document.getElementById('formMessage');
 const submit = document.getElementById('formSubmit');
 
-let empty = []; // create array to store empty fields
+const fields = [formTitle, formName, formEmail, formSubject, formMessage]; // all fields
+let empty = []; // store empty fields
 const validEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; // email format
 let canSend = true; // if form can be sent
 // error content
 const border = 'field-error-border';
 const content = '.field-error-content';
 
-// what to run when the form submit button is clicked
+// wait for submit to be clicked
 submit.addEventListener("click", e => {
-    e.preventDefault(); // dont refresh the page
-    if(!canSend) ClearPrevious();
-    ValidateForm(); // check to see if form is good to be sent
+    e.preventDefault(); // dont refresh page
+    if(!canSend) ClearPrevious(); // if attempted before, reset
+    ValidateForm(); // start validating fields
 })
 
-// function to reset fields if got wrong before
+// function to reset fields
 function ClearPrevious() {
-    // reset all empty fields UI
-    if(empty.length > 0) { // check for empty fields
-        for(let e = 0; e < empty.length; e++) { // loop through empty fields
-            ModifyErrorStatus(empty[e], "", false);
+        for(let f = 0; f < fields.length; f++) { // loop through fields
+            ModifyErrorStatus(fields[f], "", false); // reset status
         }
+
+        empty = []; // clear all empty fields
+        canSend = true; // reset whether form can send or not
     }
-    empty = []; // clear empty fields from array
-    canSend = true; // reset whether form can send or not
-}
 
 // function to check if all form fields are good before sending
 function ValidateForm() {
