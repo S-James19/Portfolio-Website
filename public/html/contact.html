@@ -15,6 +15,8 @@
     <script src="https://kit.fontawesome.com/72dcaa571b.js" crossorigin="anonymous"></script>
     <!-- Navigation bar responsive-->
     <script type="text/javascript" src="../javascripts/navbar.js" defer></script>
+    <!-- Form validation -->
+    <script type="text/javascript" src="../javascripts/form-validation.js" defer></script>
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="../stylesheets/styles.css" />
@@ -90,35 +92,41 @@
                 </div>
               <div class="vertical-line"></div>
 
-              <!------------------ CONTACT FORM TO FILL IN  ---------------------->
-              <form class="contact-form" method="POST" action="/sendemail">
+              <!------------------ CONTACT FORM TO FILL IN  ethod="POST" action="/sendemail" ---------------------->
+              <form class="contact-form" id="contactform">
                 <div class="contact-form-input">
                   <label class="required" for="formTitle">Title</label> <!-- Title -->
                   <select id="formTitle" name="Title">
+                    <option value="Choose">Choose</option>
                     <option value="Mr">Mr</option>
                     <option value="Mrs">Mrs</option>
                     <option value="Master">Master</option>
                     <option value="Miss">Miss</option>
                   </select>
+                  <div class="field-error-content"></div>
                 </div>
                 <div class="contact-form-input">
                   <label class="required" for="formName">Full Name</label> <!-- Name -->
                   <input type="text" id="formName" name="Name" placeholder="Name">
+                  <div class="field-error-content"></div>
                 </div>
                 <div class="contact-form-input">
                   <label class="required" for="formEmail">Email</label> <!-- Email -->
                   <input type="email" id="formEmail" name="Email" placeholder="Email">
+                  <div class="field-error-content"></div>
                 </div>
                 <div class="contact-form-input">
                   <label class="required" for="formSubject">Subject</label> <!-- Subject -->
                   <input type="text" id="formSubject" name="Subject" placeholder="Subject">
+                  <div class="field-error-content"></div>
                 </div>
                 <div class="contact-form-message" for="formMessage">
                   <label class="required" for="">Message</label> <!-- Message -->
                   <textarea id="formMessage" placeholder="Please enter message here" name="Message"></textarea>
+                  <div class="field-error-content"></div>
                 </div>
                 <div class="contact-form-submit"> <!-- Submit button -->
-                  <input class="btn-default btn-submit" type="submit" value="submit" alt="Button to subimt form email.">
+                  <input id="formSubmit" class="btn-default btn-submit" type="submit" value="submit" alt="Button to subimt form email.">
                 </div>
               </form>
             </div>

@@ -93,6 +93,17 @@
     text-align: left;
 }
 
+/* error validation text */
+.field-error-content {
+    font-size: clamp(0.6rem, 2vmin, 1rem);
+    margin-top: 2%;
+    color: rgba(251, 129, 34, 1);
+}
+
+.field-error-border {
+    border: 2px solid rgba(251, 129, 34, 1) !important;
+}
+
 @media(max-width: 720px) {
     .contact-form {
         grid-template-columns: 1fr;
