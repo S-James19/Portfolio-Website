@@ -6,6 +6,9 @@ const database = require('./database');
 const path = require('path');
 const mailer = require('./mail');
 const mail = require('./mail');
+const {body, validationResult} = require('express-validator');
+const { json } = require('body-parser');
+const { response } = require('express');
 
 // private .env file path
 require('dotenv').config({path: path.resolve(__dirname, "../private/.env")});
@@ -87,16 +90,28 @@ function ReturnProject(req, res, id, filepath) {
 // ---------- MAIL SERVER ----------- //
 
 //send email using data from contact form
-router.post('/sendemail', async (req, res) => {
-    try {
-        await mail.SendEmail(req, res);  // to see if email was successfully sent
-        res.send({answer: "hello it is working"}); // to send user back file
+router.post('/sendemail', [
+    // validation rules for form input
+    body('Title').notEmpty(),
+    body('Name').notEmpty(),
+    body('Email').notEmpty().isEmail(),
+    body('Subject').notEmpty(),
+    body('Message').notEmpty(),
+], async (req, res) => {
+    const errors = validationResult(req); // create object of errors in validation
+    if(!errors.isEmpty()) { // check if errors
+        return res.status(406).json({Message: "User validation error."}); // 
     }
-    catch(err) { // email did not send
-        res.sendStatus(500);
+    else { // no errors
+        try { // attempt to send emails
+            await mail.SendEmail(req, res); // attempt sending email
+            return res.status(200).json({Message: "Email sent successfully."});
+        }
+        catch { // email failed, validation correct
+            return res.status(500).json({Message: "Server error."});
+        }
     }
-
 });
 
-//export module
+//export modulee
 module.exports = router;

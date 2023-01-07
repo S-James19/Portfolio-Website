@@ -52,7 +52,7 @@ function ValidateForm() {
         }
     } // check to see if there are any validation errors
 
-    if(canSend) Send(form);
+    if(canSend) PrepareSend();
 }
 
 // activate error on UI
@@ -65,4 +65,16 @@ function ModifyErrorStatus(id, message, action) {
         if(canSend) canSend = false; // stop form from sending
     } // reset error
     else id.classList.remove(border); // no error, remove border
+}
+
+function PrepareSend() {
+    let mail = {
+        "Title": formTitle.value,
+        "Name": formName.value,
+        "Email": formEmail.value,
+        "Subject": formSubject.value,
+        "Message": formMessage.value
+    }
+
+    Send(mail);
 }

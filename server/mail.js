@@ -7,6 +7,11 @@ const { resolve } = require('path');
 // storing functions that can be called by importing modules
 let mail = {}
 
+// validate email before it is sent
+mail.validateEmail = (req, res) => {
+    
+}
+
 // function to send an email
 mail.SendEmail = (req, res) => {
     return new Promise((resolve, rejects) => {
@@ -33,11 +38,10 @@ mail.SendEmail = (req, res) => {
             if(error){ // error
                 return rejects(error);
             }
-            else { // successfully sent 
-                return(resolve("success"));
+            else { // successfully sent
+                return resolve("success");
             }
         });
     });
 }
-
 module.exports = mail;

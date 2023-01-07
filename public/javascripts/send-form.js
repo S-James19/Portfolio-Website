@@ -1,14 +1,11 @@
-// Script contains source code from: https://www.youtube.com/watch?v=DqyJFV7QJqc
+// function to send validated email to server
+async function Send(mailObj) {
 
-function Send(form) {
-    const formData = new FormData(form);
-    const data = new URLSearchParams(formData);
-    
-    fetch('/sendemail', {
-        method: 'POST',
-        body: data
-    })
-    .then(res => {
-        console.log(res.json());
-    })
+    // wait for response from server before making changes to client end
+    const response = await fetch('/sendemail', // wait for response
+    { method: 'POST', // sending form data
+    headers: {'Content-Type': 'application/json'}, // sending json format
+    body: (JSON.stringify(mailObj))}); // convert object to json to send
+
+    console.log(response);
 }
