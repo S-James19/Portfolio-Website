@@ -1,4 +1,4 @@
-//code https://www.youtube.com/watch?v=LVfH5FDOa3o
+//Script contains source code from: https://www.youtube.com/watch?v=LVfH5FDOa3o
 
 // access required modules
 const express = require('express');
@@ -90,10 +90,9 @@ function ReturnProject(req, res, id, filepath) {
 router.post('/sendemail', async (req, res) => {
     try {
         await mail.SendEmail(req, res);  // to see if email was successfully sent
-        res.sendFile(path.join(pub, "html/contact.html")); // to send user back file
+        res.send({answer: "hello it is working"}); // to send user back file
     }
     catch(err) { // email did not send
-        console.log(err);
         res.sendStatus(500);
     }
 

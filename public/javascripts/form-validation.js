@@ -6,7 +6,7 @@ const formName = document.getElementById('formName');
 const formEmail = document.getElementById('formEmail');
 const formSubject = document.getElementById('formSubject');
 const formMessage = document.getElementById('formMessage');
-const submit = document.getElementById('formSubmit');
+const form = document.getElementById('contactForm');
 
 const fields = [formTitle, formName, formEmail, formSubject, formMessage]; // all fields
 let empty = []; // store empty fields
@@ -17,7 +17,7 @@ const border = 'field-error-border';
 const content = '.field-error-content';
 
 // wait for submit to be clicked
-submit.addEventListener("click", e => {
+form.addEventListener('submit', e => {
     e.preventDefault(); // dont refresh page
     if(!canSend) ClearPrevious(); // if attempted before, reset
     ValidateForm(); // start validating fields
@@ -51,11 +51,12 @@ function ValidateForm() {
             ModifyErrorStatus(empty[f], "Missing field.", true); // send notification
         }
     } // check to see if there are any validation errors
-    else if(canSend) SendForm();
+
+    if(canSend) Send(form);
 }
 
 // activate error on UI
-function ModifyErrorStatus(id, message, action) {
+function ModifyErrorStatus(id, message, action) { 
     const parentID = id.parentElement; // get parent element of input
     const errorContent = parentID.querySelector(content); // get div storing error content
     errorContent.innerHTML = message; // add message text to content
@@ -64,9 +65,4 @@ function ModifyErrorStatus(id, message, action) {
         if(canSend) canSend = false; // stop form from sending
     } // reset error
     else id.classList.remove(border); // no error, remove border
-}
-
-//function to send form after validation
-function SendForm() {
-    console.log("ready to go captain");
 }

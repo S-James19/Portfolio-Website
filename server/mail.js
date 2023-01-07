@@ -1,4 +1,4 @@
-// Script references code from: https://www.youtube.com/watch?v=30VeUWxZjS8&t=277s
+// Script contains source code from: https://www.youtube.com/watch?v=30VeUWxZjS8&t=277s
 
 const { rejects } = require('assert');
 const mailer = require('nodemailer');

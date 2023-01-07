@@ -1,4 +1,3 @@
-
 // import necessary packages for database connection
 const mysql = require('mysql2');
 const path = require('path');
@@ -7,7 +6,7 @@ const path = require('path');
 // https://stackoverflow.com/questions/69259896/set-environment-variables-outside-of-pages-dir-in-nextjs
 require('dotenv').config({path: path.resolve(__dirname, "../private/.env")});
 
-//code from https://www.youtube.com/watch?v=LVfH5FDOa3o
+//Database connection & query format source code from https://www.youtube.com/watch?v=LVfH5FDOa3o
 
 // create connection pool for connecting to database
 const connectionPool = mysql.createPool({

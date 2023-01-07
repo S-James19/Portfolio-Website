@@ -1,4 +1,4 @@
-// Script uses code referenced from - https://www.youtube.com/watch?v=LVfH5FDOa3o
+// Script contains source code from: https://www.youtube.com/watch?v=LVfH5FDOa3o
 
 // access modules
 const express = require('express');
