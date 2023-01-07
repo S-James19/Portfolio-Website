@@ -102,15 +102,15 @@ router.post('/sendemail', [
 ], async (req, res) => {
     const errors = validationResult(req); // create object of errors in validation
     if(!errors.isEmpty()) { // check if errors
-        return res.status(406).json({Message: "User validation error."}); // 
+        return res.status(400).json({Status: 400, Message: "User validation error."}); // 
     }
     else { // no errors
         try { // attempt to send emails
             await mail.SendEmail(req, res); // attempt sending email
-            return res.status(200).json({Message: "Email sent successfully."});
+            return res.status(200).json({Status: 200, Message: "Email sent successfully."});
         }
         catch { // email failed, validation correct
-            return res.status(500).json({Message: "Server error."});
+            return res.status(500).json({Status: 500, Message: "Server error."});
         }
     }
 });
