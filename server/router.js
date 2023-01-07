@@ -89,6 +89,8 @@ function ReturnProject(req, res, id, filepath) {
 
 // ---------- MAIL SERVER ----------- //
 
+//Boilerplate code reference: https://express-validator.github.io/docs/
+
 //send email using data from contact form
 router.post('/sendemail', [
     // validation rules for form input
