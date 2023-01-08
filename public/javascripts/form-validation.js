@@ -1,6 +1,4 @@
-
 // get required fields
-const submitForm = document.getElementById('submitForm');
 const formTitle = document.getElementById('formTitle');
 const formName = document.getElementById('formName');
 const formEmail = document.getElementById('formEmail');
@@ -67,6 +65,7 @@ function ModifyErrorStatus(id, message, action) {
     else id.classList.remove(border); // no error, remove border
 }
 
+// function to create object of form contents to send to server
 function PrepareSend() {
     let mail = {
         "Title": formTitle.value,
@@ -77,4 +76,12 @@ function PrepareSend() {
     }
 
     Send(mail);
+}
+
+//function to clear fields after validation
+function ClearFields() {
+    formName.value = "";
+    formEmail.value = "";
+    formMessage.value = "";
+    formSubject.value = "";
 }

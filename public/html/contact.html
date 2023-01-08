@@ -19,6 +19,8 @@
     <script type="text/javascript" src="../javascripts/send-form.js"></script>
     <!-- Form validation -->
     <script type="text/javascript" src="../javascripts/form-validation.js" defer></script>
+    <!-- Form validation -->
+    <script type="text/javascript" src="../javascripts/popup.js" defer></script>
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="../stylesheets/styles.css" />
@@ -31,14 +33,15 @@
     <!------------------ HEADER/NAVBAR ---------------------->
 
     <!-- Submit form popup -->
-    <div class="popup-full-page" id="submitPopup" hidden>
+    <div class="popup-full-page" id="submitPopup">
       <div class="submit-message-container">
         <div class="submit-message-content">
           <div class="submit-message-text">
             <p class="popup-message">Form was successfully submitted</p>
+            <p class="popup-status">this is a test</p>
           </div>
           <div class="btn-container btn-container-submit">
-            <button class="btn-default btn-submit-close" alt="Button to close pop up">Close</button>
+            <button class="btn-default btn-submit-close" alt="Button to close pop up" type="close">Close</button>
           </div>
         </div>
       </div>

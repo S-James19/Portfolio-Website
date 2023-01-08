@@ -25,5 +25,8 @@ function FormResponse(res) {
     const popup = document.getElementById('submitPopup'); // access popup
     popup.style.display = "flex"; // make popup visible
     const message = popup.querySelector('.popup-message'); // access message area
-    console.log(content);
+    const status = popup.querySelector('.popup-status');
+    message.innerHTML= res.Message; // set popup message to recieved message from server
+    status.innerHTML = res.Status; // set popup status to status from server
 }
+
