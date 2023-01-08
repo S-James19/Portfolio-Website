@@ -24,10 +24,25 @@
     <link rel="stylesheet" href="../stylesheets/styles.css" />
     <link rel="stylesheet" href="../stylesheets/contact.css" />
     <link rel="stylesheet" href="../stylesheets/button.css"/>
+    <link rel="stylesheet" href="../stylesheets/popup.css"/>
   </head>
 
   <body>
     <!------------------ HEADER/NAVBAR ---------------------->
+
+    <!-- Submit form popup -->
+    <div class="popup-full-page" id="submitPopup" hidden>
+      <div class="submit-message-container">
+        <div class="submit-message-content">
+          <div class="submit-message-text">
+            <p class="popup-message">Form was successfully submitted</p>
+          </div>
+          <div class="btn-container btn-container-submit">
+            <button class="btn-default btn-submit-close" alt="Button to close pop up">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <header class="index color3">
       <!-- header -->
@@ -136,17 +151,6 @@
         </div>
       </div>
     </section>
-
-    <div class="submit-message-container">
-      <div class="submit-message-content">
-        <div class="submit-message-text">
-          <p>Form was successfully submitted</p>
-        </div>
-        <div class="btn-container btn-container-submit">
-          <button class="btn-default btn-submit-close" alt="Button to close pop up">Close</button>
-        </div>
-      </div>
-    </div>
 
       <!------------------ FOOTER ---------------------->
 

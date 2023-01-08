@@ -22,5 +22,8 @@ async function Send(mailObj) {
 
 // function to take response and apply changes to site
 function FormResponse(res) {
-
+    const popup = document.getElementById('submitPopup'); // access popup
+    popup.style.display = "flex"; // make popup visible
+    const message = popup.querySelector('.popup-message'); // access message area
+    console.log(content);
 }
