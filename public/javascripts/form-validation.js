@@ -53,7 +53,7 @@ function ValidateForm() {
     if(canSend) PrepareSend();
 }
 
-// activate error on UI
+// function to update field UI for user with message
 function ModifyErrorStatus(id, message, action) { 
     const parentID = id.parentElement; // get parent element of input
     const errorContent = parentID.querySelector(content); // get div storing error content
@@ -74,7 +74,6 @@ function PrepareSend() {
         "Subject": formSubject.value,
         "Message": formMessage.value
     }
-
     Send(mail);
 }
 
