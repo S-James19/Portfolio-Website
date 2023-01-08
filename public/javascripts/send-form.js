@@ -11,9 +11,9 @@ async function Send(mailObj) {
     .then((data) => {
         return data;
     })
-    .catch(error => { // fail
-        console.log("There is an error");
-        return "";
+    .catch(error => { // dont recieve response from server
+        const errMsg = {Status: 500, Message: "Error creating connection with server."}; // create message
+        return JSON.parse(JSON.stringify(errMsg)); // return json format message
     });
 
     // apply changes to site
@@ -27,6 +27,6 @@ function FormResponse(res) {
     const message = popup.querySelector('.popup-message'); // access message area
     const status = popup.querySelector('.popup-status');
     message.innerHTML= res.Message; // set popup message to recieved message from server
-    status.innerHTML = res.Status; // set popup status to status from server
+    status.innerHTML = res.Status; //res.Status; // set popup status to status from server
 }
 
