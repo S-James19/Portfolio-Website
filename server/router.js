@@ -1,4 +1,4 @@
-//Script contains source code from: https://www.youtube.com/watch?v=LVfH5FDOa3o
+//Script boilerplate code accessed from: https://www.youtube.com/watch?v=LVfH5FDOa3o
 
 // access required modules
 const express = require('express');
@@ -89,7 +89,7 @@ function ReturnProject(req, res, id, filepath) {
 
 // ---------- MAIL SERVER ----------- //
 
-//Boilerplate code reference: https://express-validator.github.io/docs/
+//Boilerplate code accessed from: https://express-validator.github.io/docs/
 
 //send email using data from contact form
 router.post('/sendemail', [

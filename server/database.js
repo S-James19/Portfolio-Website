@@ -3,12 +3,12 @@ const mysql = require('mysql2');
 const path = require('path');
 
 // access .env file storing username and password for mysql
-// https://stackoverflow.com/questions/69259896/set-environment-variables-outside-of-pages-dir-in-nextjs
+// Code accessed from: https://stackoverflow.com/questions/69259896/set-environment-variables-outside-of-pages-dir-in-nextjs
 require('dotenv').config({path: path.resolve(__dirname, "../private/.env")});
 
-//Database connection & query format source code from https://www.youtube.com/watch?v=LVfH5FDOa3o
+// Database connection & query boilerplate code accessed from: https://www.youtube.com/watch?v=LVfH5FDOa3o
 
-// create connection pool for connecting to database
+// create connection pool for connecting to database (details stored in .env files)
 const connectionPool = mysql.createPool({
     connectionLimit: 10,
     password: process.env.USER_PASSWORD,
@@ -18,6 +18,7 @@ const connectionPool = mysql.createPool({
     port: '3306'
 })
 
+// store functions to be accessed from other scripts
 let projectsDB = {};
 
 // query: get all records from projects database

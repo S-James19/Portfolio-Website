@@ -1,22 +1,15 @@
-// Script contains source code from: https://www.youtube.com/watch?v=30VeUWxZjS8&t=277s
+// Mail functionality boilerplate accessed from: https://www.youtube.com/watch?v=30VeUWxZjS8&t=277s
 
-const { rejects } = require('assert');
 const mailer = require('nodemailer');
-const { resolve } = require('path');
 
 // storing functions that can be called by importing modules
 let mail = {}
 
-// validate email before it is sent
-mail.validateEmail = (req, res) => {
-    
-}
-
 // function to send an email
 mail.SendEmail = (req, res) => {
-    return new Promise((resolve, rejects) => {
+    return new Promise((resolve, rejects) => { // create promise
 
-        //setup user account to send the emails from
+        //setup user account to send the emails from (my account details in .env)
         const transporter = mailer.createTransport( {
             service: 'gmail',
             auth: {
@@ -25,7 +18,7 @@ mail.SendEmail = (req, res) => {
             }
         });
     
-        //setup email content to send to user
+        //setup email content to send to user that was sent from client side form
         const mailOptions = {
             from: req.body.Email,
             to: process.env.USER_EMAIL,
@@ -33,7 +26,7 @@ mail.SendEmail = (req, res) => {
             text: req.body.Message
         };
     
-        // send email from logged in acconut to specified user
+        // send email from logged in account to specified user
         transporter.sendMail(mailOptions, (error, info) => {
             if(error){ // error
                 return rejects(error);

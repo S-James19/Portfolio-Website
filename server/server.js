@@ -1,4 +1,4 @@
-// Script contains source code from: https://www.youtube.com/watch?v=LVfH5FDOa3o
+// Sscript boilerplate code accessed from: https://www.youtube.com/watch?v=LVfH5FDOa3o
 
 // access modules
 const express = require('express');
@@ -7,7 +7,7 @@ const apiRouter = require('./router');
 const parser = require('body-parser');
 
 // access .env file storing username and password for mysql
-// Code from - https://stackoverflow.com/questions/69259896/set-environment-variables-outside-of-pages-dir-in-nextjs
+// Code accessed from: https://stackoverflow.com/questions/69259896/set-environment-variables-outside-of-pages-dir-in-nextjs
 require('dotenv').config({path: path.resolve(__dirname, "../private/.env")});
 
 // create application
